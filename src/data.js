@@ -1,5 +1,3 @@
-/* Manejo de data */
-
 // FUNCION SORT
 const sortData = (data,condition) => {
    
@@ -8,21 +6,21 @@ const sortData = (data,condition) => {
     if (condition === "az"){
   
 
-      arr= data.sort(sortByName)
+      arr= pokeData.sort(sortByName)
     }
   //de z/a
   if (condition === "za"){
-    arr= data.sort(sortByName).reverse();
+    arr= pokeData.sort(sortByName).reverse();
   }
 
 
   // del 1/151 
   if (condition === "idAscending"){
-    arr= data.sort(sortById)
+    arr= pokeData.sort(sortById)
   }
   // del 151/1
   if (condition === "idDescending"){
-    arr= data.sort(sortById).reverse();
+    arr= pokeData.sort(sortById).reverse();
   }
     return arr
   }
@@ -39,4 +37,31 @@ const sortData = (data,condition) => {
       }
       return -1;
   }
-  window.sortData= sortData;
+  
+ window.sortData= sortData;
+
+
+//filtrar por tipo
+//let selectType = 'Poison'
+
+
+const filterData = (data,conditon) =>{
+const pokeType = pokeData.filter(element => element.type.includes(selectType));
+
+let typeResult="";
+
+pokeType.forEach(element => {
+  typeResult= typeResult + element.name + '<br>';
+
+  document.getElementById("show-type").innerHTML = typeResult;
+
+
+});
+
+
+}
+
+window.filterData = filterData;
+
+
+//window.onload = pokeType(POKEMON.pokemon);
