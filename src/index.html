@@ -4,71 +4,72 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   
-  <body style="background-color : #095573" >
+  <body>
     
-    <header>
-      <img src="img/logo.png" alt="logo">
-    </header>
-    
-    <nav>
-      <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-primary p-4">
-            <h5 class="text-white h4">Tipo</h5>
-            <h5 class="text-white h4">Debilidad</h5>
-            <h5 class="text-white h4">Resistencia</h5>
-            <button class="btn btn-warning my-2 my-sm-0 " type="submit">electrico</button>
-          </div>
-        </div>
+    <div class="container">
+
+      <header>
+        <img src="img/logo.png" alt="logo">
+      </header>
+    <br>
+      <nav>
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-primary p-4">
+              <h5 class="text-white h4">Tipo</h5>
+              <h5 class="text-white h4">Debilidad</h5>
+              <h5 class="text-white h4">Resistencia</h5>
+              <button class="btn btn-warning my-2 my-sm-0 " type="submit">electrico</button>
+            </div>
+         </div>
            
-        <nav class="navbar navbar-dark bg-primary">
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
-            <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
-          </form>
+          <nav class="navbar navbar-dark bg-primary">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
+              <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
+            </form>
       
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Ordenar por
-          </button>
+            </button>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="ordered">
-            <a class="dropdown-item" href="#order" name="order" value="az">A/Z</a>
-            <a class="dropdown-item" href="#order" name="order" value="za">Z/A</a>
-            <a class="dropdown-item" href="#">0-151</a>
-            <a class="dropdown-item" href="#">151-0</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="ordered">
+              <a class="dropdown-item" href="#order" name="order" value="az">A/Z</a>
+              <a class="dropdown-item" href="#order" name="order" value="za">Z/A</a>
+              <a class="dropdown-item" href="#">0-151</a>
+              <a class="dropdown-item" href="#">151-0</a>
+            </div>
           </div>
-        </div>
 
-        <button class="  btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="  btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             Busqueda avanzada
-        </button>
-      
-        <select id="mySelect">
-          <option name="orderr" value="az">A/Z</option>
-          <option name="orderr" value="za">Z/A</option>
-          <option>0-151</option>
-          <option>151-0</option>
-        </select>
-      </div>    
-    </nav>
+          </button>
+    
+          <select id="mySelect">
+            <option name="orderr" value="az">A/Z</option>
+            <option name="orderr" value="za">Z/A</option>
+            <option>0-151</option>
+            <option>151-0</option>
+          </select>
+        </div>    
+      </nav>
   
 
-  
     <section>
       <div id="root">
-       
         <div id="modal" ></div>
-        <div id="showData" class="row" >  </div>  
+        <div id="show-data" class="row" >  </div>  
+        <div id="muestra"></div>
 
       </div>
     </section>
     
+
     <footer id="nav-footer">
       <div class="container">
         <div class="row">
@@ -95,7 +96,8 @@
     <script src="./data/pokemon/pokemon.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script> 
-      
+  
+  </div>
   </body>
 
 </html>

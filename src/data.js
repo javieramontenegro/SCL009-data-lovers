@@ -1,10 +1,26 @@
-/* Manejo de data */
+const filterData = (data,conditon) =>{
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+const pokeType = pokeData.filter(element => element.type.includes(selectType));
 
-const example = () => {
-  return 'example';
-};
+let typeResult="";
 
-window.example = example;
+pokeType.forEach(element => {
+  typeResult= typeResult + element.name + '<br>';
+
+  document.getElementById("show-type").innerHTML = typeResult;
+
+
+});
+
+
+}
+
+window.filterData = filterData;
+
+
+
+
+
+
+//window.onload = pokeType(POKEMON.pokemon);
+
