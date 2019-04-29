@@ -1,0 +1,16 @@
+body{
+        background-color : #095573 !important;
+    
+    }
+    
+    .card{
+        border-color: black !important;
+        border: 10rem !important;
+        border-radius: 5rem !important;
+        background-color : #69D7CF !important;
+        width: 10rem;
+        height:16rem
+       
+       
+        
+    }
