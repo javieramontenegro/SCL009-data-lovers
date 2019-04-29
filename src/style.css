@@ -1,3 +1,4 @@
+
 html{
     height: 100%;
 }
@@ -11,13 +12,14 @@ body{
     height: 100%;
 }
 
-.header
-
 .card{
-    background-color : #69D7CF !important;
-    width: 10rem;
-    height:16rem
-}
+        border-color: black !important;
+        border: 10rem !important;
+        border-radius: 5rem !important;
+        background-color : #69D7CF !important;
+        width: 10rem;
+        height:16rem
+     }
 
 .content{
   flex: 1 0 auto;
@@ -82,4 +84,3 @@ body{
 
 /* CSS used for positioning the footers at the bottom of the page. */
 /* You can remove this. */
-
