@@ -6,21 +6,21 @@ const sortData = (data,condition) => {
     if (condition === "az"){
   
 
-      arr= pokeData.sort(sortByName)
+      arr= data.sort(sortByName)
     }
   //de z/a
   if (condition === "za"){
-    arr= pokeData.sort(sortByName).reverse();
+    arr= data.sort(sortByName).reverse();
   }
 
 
   // del 1/151 
   if (condition === "idAscending"){
-    arr= pokeData.sort(sortById)
+    arr= data.sort(sortById)
   }
   // del 151/1
   if (condition === "idDescending"){
-    arr= pokeData.sort(sortById).reverse();
+    arr= data.sort(sortById).reverse();
   }
     return arr
   }
@@ -45,13 +45,13 @@ const sortData = (data,condition) => {
 //let selectType = 'Poison'
 
 
-const filterData = (data,conditon) =>{
-const pokeType = pokeData.filter(element => element.type.includes(selectType));
+const filterData = (data,condition) =>{
+const pokeType = data.filter(element => element.type.includes(condition));
 
 let typeResult="";
 
 pokeType.forEach(element => {
-  typeResult= typeResult + element.name + '<br>';
+  typeResult= typeResult + element.name ;
 
   document.getElementById("show-type").innerHTML = typeResult;
 

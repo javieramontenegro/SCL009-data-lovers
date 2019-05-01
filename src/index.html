@@ -13,91 +13,74 @@
   <body>
     
     <div class="container">
-
+    <!-- HEADER -->
       <header>
         <img src="img/logo.png" alt="logo">
       </header>
       <br>
-      <nav>
-        <div class="pos-f-t">
+      <!-- NAV QUE NO SE VE -->
+      <div class="pos-f-t">
           <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-primary p-4">
-              <h5 class="text-white h4">Tipo</h5>
-              <h5 class="text-white h4">Debilidad</h5>
-              <h5 class="text-white h4">Resistencia</h5>
-              <button class="btn btn-warning my-2 my-sm-0 " type="submit">electrico</button>
+             <div class="bg-primary p-4">
+                      <!-- BOTONES TIPOS -->
+                  <div class="btn-group-toggle" data-toggle="buttons">
+                    <label name-type="grass" class="btn btn-success offset-md-2 grass active">
+                      <input type="checkbox" checked autocomplete="off"> Planta
+                    </label>
+                 
+                    <label name-type="ground" class="btn btn-success ground active">
+                      <input type="checkbox" checked autocomplete="off"> Tierra
+                    </label>
+                  </div>
+              
+                  <h5 class="text-white h4">Tipo</h5>
+                  <h5 class="text-white h4">Debilidad</h5>
+                  <h5 class="text-white h4">Resistencia</h5>
+                
             </div>
-
-          </div>
-        
-        
-          <nav class="navbar navbar-dark bg-primary">
+         </div>  
+         
+        <!-- NAV -->
+        <nav class="navbar navbar-dark bg-primary">
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
               <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
             </form>
-            <div class="dropdown">
+          <!-- DROPDOWN -->
+           
+          <div class="dropdown">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Ordenar por
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  >
-                <button type="button"ordered-by="az"  class="dropdown-item ordered-by"  >A/Z</button>
-                <button type="button" ordered-by="za" class="dropdown-item ordered-by"  >Z/A</button>
-                <button type ="button" ordered-by="idAscending"class="dropdown-item ordered-by" >0-151</button>
-                <button type="button" ordered-by="idDescending"class="dropdown-item ordered-by" >151-0</button>
-              </div>
-            </div>
-
+              
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  >
+                
+                  <button type="button"ordered-by="az"class="dropdown-item ordered-by"> A/Z </button>
+                  <button type="button" ordered-by="za"class="dropdown-item ordered-by">Z/A </button>
+                  <button type ="button"ordered-by="idAscending"class="dropdown-item ordered-by"> 0-151 </button>
+                  <button type="button"ordered-by="idDescending"class="dropdown-item ordered-by"> 151-0 </button>
+                
+                </div>
+             
+          </div>
+           
               <button class="  btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               Busqueda avanzada
             </button>
-            <select id="mySelect">
-              <option  value="az">A/Z</option>
-              <option  value="za">Z/A</option>
-              <option value="idAscending" >0-151</option>
-              <option value="idDescending">151-0</option>
-            </select>
-            
-          
-          
-          
          </nav>
         </div>
-
+     <br>
 
       
    
-    <div id="root">
-      <div id="modal" >
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-
-         </div>
+    
+     
            
-          <nav class="navbar navbar-dark bg-primary">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
-              <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
-            </form>
+          
       
           
-        </div>    
-      </nav>
+      
+      
   
 
     <section>
@@ -107,13 +90,11 @@
     </section>
    
            
-      <div id="modal" ></div>
-      <div id="show-data" class="row" >  </div>  
-      <div id="showDataOrder" class="row" >  </div>
+      
 
-      </div>
+      
   
-  </div>
+  
         
   <footer id="nav-footer">
     <div class="container">

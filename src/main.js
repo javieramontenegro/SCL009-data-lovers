@@ -3,13 +3,13 @@
 const pokeData=POKEMON.pokemon;
 const orderDos = document.querySelectorAll("button.ordered-by")
 const container = document.getElementById("show-data")
-console.log(orderDos);
+//console.log(orderDos);
 
 // LISTENER PARA LLAMAR A LA FUNCION SORT FINALLL
  
 orderDos.forEach(element => {
   element.addEventListener('click', () =>{ 
-    console.log("click");
+   // console.log("click");
     container.innerHTML="";
     addElement(window.sortData(pokeData,element.getAttribute("ordered-by")));
 
@@ -51,28 +51,17 @@ orderDos.forEach(element => {
 
  
  // FUNCION MODAL  
- btnInfo= document.getElementsByClassName("btn btn-primary");
- btnInfo.addEventListener('click', () =>{
-      
-   pokeData.forEach(element =>{
-    modal.innerHTML += 
-    
-   name = ` ${element.num}; ` 
-   
-   console.log("el modal funciona")
-    })
  
- })
   
 
 // FUNCION FILTRAR POR NOMBRE
 
-const btnSearch = document.getElementsByTagName("button")[1];
+const btnSearch = document.getElementsByTagName("button")[0];
 
 btnSearch.addEventListener('click', (e) => {
 e.preventDefault();
 
-let pokeSearch = document.getElementsByTagName("input")[0].value;
+let pokeSearch = document.getElementsByTagName("input")[2].value;
 
 const pokeName= pokeData.find (element => {
     return element.name === pokeSearch;
@@ -95,3 +84,5 @@ container.innerHTML =  `
 </div>`
 
 });
+// DATA PRUEBA
+
