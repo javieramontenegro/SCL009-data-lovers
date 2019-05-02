@@ -1,9 +1,31 @@
 
 /* Manejo del DOM */
-const pokeData=POKEMON.pokemon;
+const pokeData=window.POKEMON.pokemon;
 const order = document.querySelectorAll("button.ordered-by")
 const container = document.getElementById("show-data")
+const btnSearch = document.getElementsByTagName("button")[0];
+let pokeSearch = document.getElementsByTagName("input")[3].value;
 //console.log(order);
+
+// FUNCION FILTRAR POR NOMBRE
+
+
+
+btnSearch.addEventListener('click', (e) => {
+e.preventDefault();
+
+container.innerHTML="";
+addElement(window.filterName(pokeData,pokeSearch));
+
+console.log(pokeName);
+
+
+});
+
+
+
+
+
 
 // LISTENER PARA LLAMAR A LA FUNCION SORT FINALLL
  
@@ -16,11 +38,7 @@ order.forEach(element => {
   })
 })
 
-//FUNCION PARA ACHICAR IMAGEN -- INTENTO 
-function imageSize() {
-let image = document.getElementsByClassName("card-img-top");
-image.width="50";
-};
+// funcion filtrar nombre
 
 // FUNCION MOSTRAR CARTAS 
 
@@ -45,7 +63,7 @@ image.width="50";
     </div>`
        
   });
-    console.log("lista pokemon");
+    //console.log("lista pokemon");
      }
    
   
@@ -62,20 +80,14 @@ image.width="50";
  
   
 
-// FUNCION FILTRAR POR NOMBRE
 
-const btnSearch = document.getElementsByTagName("button")[0];
 
-btnSearch.addEventListener('click', (e) => {
-e.preventDefault();
 
-let pokeSearch = document.getElementsByTagName("input")[2].value;
 
-const pokeName= pokeData.find (element => {
-    return element.name === pokeSearch;
-});
-console.log(pokeName);
 
+
+
+/*
 container.innerHTML =  `
 <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
   <div class="card  border-dark text-center rounded-lg mb-3"  >
@@ -90,7 +102,7 @@ container.innerHTML =  `
   </div>
 
 </div>`
+*/
 
-});
-// DATA PRUEBA
+
 

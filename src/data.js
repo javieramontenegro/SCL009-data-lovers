@@ -41,8 +41,23 @@ const sortData = (data,condition) => {
  window.sortData= sortData;
 
 
-//filtrar por tipo
+// FILTRAR NOMBRE
+
+const filterName = (data,name) =>{
+let obj={};
+ 
+obj =data.find (element => {
+  return element.name === name;
+});
+return obj;
+
+}
+window.filterName=filterName;
+
+
+ //filtrar por tipo
 //let selectType = 'Poison'
+
 
 
 const filterData = (data,condition) =>{
