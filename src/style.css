@@ -1,3 +1,16 @@
+/*
+@import url(//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b);
+@font-face {font-family: "04b";
+    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot");
+    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.svg#04b") format("svg");
+}
+
+*/
+
 
 html{
     height: 100%;
@@ -14,8 +27,34 @@ html{
 .fight{
     background-color: #FF0E1C !important;
     top:150px;
-
 }
+.bug{
+    background-color: #6FBB55 !important;
+    top:150px;
+}
+.normal {
+    background-color: #BFBBBB !important;
+    top:150px;
+    
+}
+
+.fly {
+    background-color: #61B2CC !important;
+    top:150px;
+}
+.dragon {
+    background-color: #DF6262 !important;
+    top:150px;
+}
+.psychic{
+    background-color: #E24FC2 !important;
+    top:150px;
+}
+.ice{
+    background-color: #00D1FF !important;
+    top:150px;
+}
+
 
 body{
     background-color : #095573 !important;
@@ -24,25 +63,31 @@ body{
     flex-direction: column;
     -webkit-flex-direction: column;
     height: 100%;
+    
+}
+.navbar{
+    background-color: #DFDFDF;
+}
+
+.p-4{
+    background-color: #69D7CF;
 }
 
 
 
 
-#back-color{
-    position:absolute;
+
+.col-8{
     background-color: #FCE94D;
     border-radius: 2rem;
     z-index:0;
-    width: 75rem;
-  height: 417rem;
-  left: 5rem;
-}
 
+}
 
 
 .card{
         background-color : #69D7CF !important;
+        
         width: 10rem !important;
         height:15rem ;
         z-index:1; 
@@ -122,6 +167,7 @@ body{
         text-align: center;
     }
 }
+
 
 
 

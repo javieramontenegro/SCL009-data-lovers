@@ -15,7 +15,25 @@ btnSearch.addEventListener('click', (e) => {
 e.preventDefault();
 
 container.innerHTML="";
-addElement(window.filterName(pokeData,pokeSearch));
+let pokeName = window.filterName(pokeData,document.getElementsByTagName("input")[3].value);
+
+container.innerHTML = 
+`  
+<div class=" col-12  col-sm-6 col-md-4 col-lg-3 col-xl-2 " >
+<div class="card  border-dark text-center rounded-lg mb-3"  >
+  <p class="card-text">${pokeName.num}</p>
+    <img src="${pokeName.img}" class="card-img-top" alt="...">
+
+    <h5 class="card-title">${pokeName.name}</h5>
+<div>  
+   <button type="button"  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+     Info
+   </button>
+</div>
+<br>
+</div>
+
+</div>`
 
 console.log(pokeName);
 
