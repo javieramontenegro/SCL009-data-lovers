@@ -16,7 +16,7 @@ html{
     height: 100%;
 }
 
-.grass{
+.Grass{
     background-color: #23D406 !important;
 }
 .ground{
@@ -54,10 +54,37 @@ html{
     background-color: #00D1FF !important;
     top:150px;
 }
-
+.fairy{
+    background-color: #FFA6A6 !important;
+}
+.steel{
+    background-color: #B4D3DD !important;
+}
+.poison{
+    background-color: #CC77CE !important;
+}
+.fire{
+    background-color: #E45708 !important;
+}
+.darck{
+    background-color: #4F4949 !important;
+}
+.rock{
+    background-color: #948964 !important;
+}
+.ghost{
+    background-color: #B74FC0 !important;
+}
+.thunder{
+    background-color: #E5E947 !important;
+}
+.water{
+    background-color: #0B63E9 !important;
+}
 
 body{
     background-color : #095573 !important;
+    
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -65,8 +92,10 @@ body{
     height: 100%;
     
 }
+
 .navbar{
     background-color: #DFDFDF;
+    
 }
 
 .p-4{

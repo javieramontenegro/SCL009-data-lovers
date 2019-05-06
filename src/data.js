@@ -55,28 +55,18 @@ return obj;
 window.filterName=filterName;
 
 
- //filtrar por tipo
-//let selectType = 'Poison'
-
+ //FILTRAR POR TIPO
 
 
 const filterData = (data,condition) =>{
-const pokeType = data.filter(element => element.type.includes(condition));
+  let typeResult=[];
+  typeResult = data.filter(element => element.type.includes(condition));
 
-let typeResult="";
-
-pokeType.forEach(element => {
-  typeResult= typeResult + element.name ;
-
-  document.getElementById("show-type").innerHTML = typeResult;
-
-
-});
-
+return typeResult;
 
 }
 
 window.filterData = filterData;
 
 
-//window.onload = pokeType(POKEMON.pokemon);
+

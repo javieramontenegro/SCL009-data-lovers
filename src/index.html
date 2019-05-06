@@ -6,7 +6,7 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b" rel="stylesheet" type="text/css"/>
+   <!-- <link href="//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b" rel="stylesheet" type="text/css"/> -->
 
   </head>
   
@@ -22,55 +22,91 @@
       <!-- NAV QUE NO SE VE -->
       <div class="pos-f-t">
           <div class="collapse" id="navbarToggleExternalContent">
-             <div class="p-4">
-                      <!-- BOTONES TIPOS -->
+             <div class="p-4" >
+                  
+              <!-- BOTONES TIPOS -->
                   <div class="btn-group-toggle" data-toggle="buttons">
-                           <!-- GRASS -->
-                    <label name-type="grass" class="btn btn-success offset-md-2 grass active">
-                      <input type="checkbox" checked autocomplete="off"> Planta
+                   
+                         <!-- GRASS -->
+                    <label  name-type="Grass" class="btn btn-success offset-md-2 Grass active">
+                      <input  type="radio" class="options" type-by="Grass" id="Grass" autocomplete="off"> Planta
                     </label>
-                           <!-- GROUND -->
+                         
+                    
+                         <!-- GROUND -->
                     <label name-type="ground" class="btn btn-success ground active">
-                      <input type="checkbox" checked autocomplete="off"> Tierra
+                      <input  type="radio" class="options" id="Ground" value="Ground" autocomplete="off"> Tierra
                     </label>
                             <!-- FIGHT --> 
                     <label name-type="fight" class="btn btn-success fight active">
-                       <input type="checkbox" checked autocomplete="off"> Lucha
+                       <input type="radio" name="options" id="option3" autocomplete="off"> Lucha
                     </label>
                  
                             <!-- BUG --> 
                     <label name-type="bug" class="btn btn-success bug active">
-                        <input type="checkbox" checked autocomplete="off"> Bicho
+                        <input  type="radio" name="options" id="option4" autocomplete="off"> Bicho
                     </label>
                  
                            <!-- NORMAL --> 
                     <label name-type="normal" class="btn btn-success normal active">
-                      <input type="checkbox" checked autocomplete="off"> Normal
+                      <input  type="radio" name="options" id="option5" autocomplete="off"> Normal
                     </label>
                              <!-- FLY --> 
                     <label name-type="fly" class="btn btn-success fly active">
-                      <input type="checkbox" checked autocomplete="off"> Volador
+                      <input  type="radio" name="options" id="option6" autocomplete="off"> Volador
                     </label>
                              <!-- DRAGON --> 
                     <label name-type="dragon" class="btn btn-success dragon active">
-                      <input type="checkbox" checked autocomplete="off"> Dragon
+                      <input  type="radio" name="options" id="option7" autocomplete="off"> Dragon
                     </label>
                              <!-- PSYCHIC --> 
                     <label name-type="psychic" class="btn btn-success psychic active">
-                      <input type="checkbox" checked autocomplete="off"> Psiquico
+                      <input  type="radio" name="options" id="option8" autocomplete="off"> Psiquico
                     </label>
                   
                               <!-- ICE --> 
-                    <label name-type="ice" class="btn btn-success ice active">
-                      <input type="checkbox" checked autocomplete="off"> Hielo
+                    <label type="label" name-type="ice" class="btn btn-success ice active">
+                      <input  type="radio" name="options" id="option9" autocomplete="off"> Hielo
                     </label>
-                 
-
-
-
-
-                 
-                    </div>
+                    <br>
+                              <!-- FAIRY --> 
+                    <label name-type="fairy" class="btn btn-success offset-md-2 fairy active">
+                      <input  type="radio" name="options" id="option10" autocomplete="off"> Hada
+                    </label>
+                              <!-- ACERO --> 
+                    <label name-type="steel" class="btn btn-success steel active">
+                      <input  type="radio" name="options" id="option11" autocomplete="off"> Acero
+                    </label>
+                              <!-- POISON --> 
+                    <label name-type="poison" class="btn btn-success poison active">
+                      <input  type="radio" name="options" id="option12" autocomplete="off"> Veneno
+                    </label>
+                              <!-- FIRE --> 
+                    <label name-type="fire" class="btn btn-success fire active">
+                      <input  type="radio" name="options" id="option13" autocomplete="off"> Fuego
+                    </label>
+                              <!-- DARCK --> 
+                    <label name-type="darck" class="btn btn-success darck active">
+                      <input  type="radio" name="options" id="option14" autocomplete="off"> Siniestro
+                    </label>
+                             <!-- ROCK --> 
+                    <label name-type="rock" class="btn btn-success rock active">
+                      <input  type="radio" name="options" id="option15" autocomplete="off"> Roca
+                    </label>
+                               <!-- GHOST --> 
+                    <label name-type="ghost" class="btn btn-success ghost active">
+                      <input  type="radio" name="options" id="option16" autocomplete="off"> Fantasma
+                    </label>
+                                <!-- THUNDER --> 
+                    <label name-type="thunder" class="btn btn-success thunder active">
+                      <input  type="radio" name="options" id="option17" autocomplete="off"> Electrico
+                    </label>
+                              <!-- WATER --> 
+                    <label name-type="water" class="btn btn-success water active">
+                      <input  type="radio" name="options" id="option18" autocomplete="off"> Agua
+                    </label>
+                  
+                  </div>
               
                   <h5 class="text-white h4">Tipo</h5>
                   <h5 class="text-white h4">Debilidad</h5>
@@ -80,7 +116,7 @@
          </div>  
          
         <!-- NAV -->
-        <nav class="navbar navbar-dark ">
+        <nav class="navbar navbar-fixed-top navbar-dark ">
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
               <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
