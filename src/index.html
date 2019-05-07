@@ -18,20 +18,43 @@
         <img src="img/logo.png" alt="logo">
       </header>
       <br>
-      <nav>
-        <div class="pos-f-t">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-primary p-4">
-              <h5 class="text-white h4">Tipo</h5>
-              <h5 class="text-white h4">Debilidad</h5>
-              <h5 class="text-white h4">Resistencia</h5>
-              <button class="btn btn-warning my-2 my-sm-0 " type="submit">electrico</button>
-            </div>
+      
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-primary p-4">
 
-          </div>
+            <h5 class="text-white h4 col-xs-12 col-md-3">Tipo</h5>
+              
+            <!-- BOTONES TIPOS -->
+            <div class="col-xs-12 col-md-9">
+                    
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Grass" > Planta </button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Ground" > Tierra</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Fighting" > Lucha</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Bug" > Bicho</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Normal " > Normal</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Flying" > Volador</button>      
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Dragon" > Dragon</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Psychic" > Psiquico</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Ice" > Hielo</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Fairy "  > Hada</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Steel"  > Acero</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Poison"  > Veneno</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Fire"  > Fuego</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Dark "  > Siniestro</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Rock"  > Roca</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Ghost"  > Fantasma</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Electric"  > Electrico</button>
+              <button type="button" class="btn btn-success sz" name="options" option-by = "Water"  > Agua</button>
+           
+            </div> 
+          </div> 
+        </div>
+      
         
         
-          <nav class="navbar navbar-dark bg-primary">
+        <nav class="navbar navbar-dark navbar-static-top bg-primary">
+            
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
               <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
@@ -41,28 +64,19 @@
                 Ordenar por
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  >
-                <button type="button"ordered-by="az"  class="dropdown-item ordered-by"  >A/Z</button>
-                <button type="button" ordered-by="za" class="dropdown-item ordered-by"  >Z/A</button>
-                <button type ="button" ordered-by="idAscending"class="dropdown-item ordered-by" >0-151</button>
-                <button type="button" ordered-by="idDescending"class="dropdown-item ordered-by" >151-0</button>
-              </div>
+                <button type="button" ordered-by="az"  class="dropdown-item ordered-by">A/Z</button>
+                <button type="button" ordered-by="za" class="dropdown-item ordered-by">Z/A</button>
+                <button type ="button" ordered-by="idAscending"class="dropdown-item ordered-by">0-151</button>
+                <button type="button" ordered-by="idDescending"class="dropdown-item ordered-by">151-0</button>
+              </div> 
             </div>
 
               <button class="  btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               Busqueda avanzada
-            </button>
-            <select id="mySelect">
-              <option  value="az">A/Z</option>
-              <option  value="za">Z/A</option>
-              <option value="idAscending" >0-151</option>
-              <option value="idDescending">151-0</option>
-            </select>
-            
+            </button>              
           
-          
-          
-         </nav>
-        </div>
+          </nav>
+      </div>
 
 
       
@@ -79,7 +93,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                ...
+              
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -88,29 +102,16 @@
             </div>
 
          </div>
-           
-          <nav class="navbar navbar-dark bg-primary">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
-              <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
-            </form>
-      
-          
         </div>    
-      </nav>
+     
   
 
     <section>
-      <div id="root">
-        <div id="show-data" class="row" >  </div>  
-      </div>
+        <div id="show-data" class="row" > </div>  
     </section>
    
            
-      <div id="modal" ></div>
-      <div id="show-data" class="row" >  </div>  
-      <div id="showDataOrder" class="row" >  </div>
-
+      
       </div>
   
   </div>

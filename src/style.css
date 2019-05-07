@@ -27,6 +27,10 @@ body{
    min-height: 200px;
 }
 
+.sz{
+    width: 90px
+}
+
 #nav-footer{
    flex: 0 0 auto;
    -webkit-flex: 0 0 auto;
