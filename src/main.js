@@ -3,12 +3,17 @@
 const pokeData=window.POKEMON.pokemon;
 const order = document.querySelectorAll("button.ordered-by");
 
-const filter = document.type.options;
+const filter = document.querySelectorAll("button.type-poke");
 const container = document.getElementById("show-data");
-const btnSearch = document.getElementsByTagName("button")[0];
-let pokeSearch = document.getElementsByTagName("input")[3].value;
-console.log(filter);
-
+const btnSearch = document.getElementsByTagName("button")[18];
+let btnType="";
+let btnWeak ="";
+let modalImp = document.getElementById("modal");
+// FUNCION ACTIVDA
+  
+window.addEventListener('load', () =>{
+  addElement(pokeData);
+  });
 
 // FUNCION FILTRAR POR NOMBRE
 
@@ -16,81 +21,117 @@ btnSearch.addEventListener('click', (e) => {
 e.preventDefault();
 
 container.innerHTML="";
-let pokeName = window.filterName(pokeData,document.getElementsByTagName("input")[18].value)
+modalImp.innerHTML="";
+let element = window.filterName(pokeData,document.getElementsByTagName("input")[0].value)
+
 
 container.innerHTML = 
 `  
 <div class=" col-12  col-sm-6 col-md-4 col-lg-3 col-xl-2 " >
 <div class="card  border-dark text-center rounded-lg mb-3"  >
-  <p class="card-text">${pokeName.num}</p>
-    <img src="${pokeName.img}" class="card-img-top" alt="...">
+  <p class="card-text">${element.num}</p>
+    <img src="${element.img}" class="card-img-top" alt="...">
 
-    <h5 class="card-title">${pokeName.name}</h5>
+    <h5 class="card-title">${element.name}</h5>
 <div>  
-   <button type="button"  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
-     Info
-   </button>
+       <a  class="btn btn-primary " data-toggle="modal" data-target="#modal${element.id}" href="#modal${element.id}">
+          Info
+        </a>
 </div>
 <br>
 </div>
 
 </div>`
 
-console.log(pokeName);
+modalImp.innerHTML +=
+`
+         <div class="modal fade" id="modal${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">${element.name} N°${element.num} </h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                      </button>
+                           </div>
+                     <div class="modal-body">
+                        <div class="container-fluid">
+                               <div class="row">  
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                          <div class="col-7 col-sm-6">
+                                              <img src="${element.img}"  alt="...">
+                                          
+                                                 <h5 >Altura:</h5>
+                                                  <h5 >${element.height}</h5>
+                                                  <h5 >Peso:</h5>
+                                                  <h5 >${element.weight}</h5>
+                                              </div>    
+                                           
+                                             <div class="col-3 col-sm-6">
+                                                <h5 class="modal-title" >Tipo</h5>
+                                         
+                                                  <div id="type${element.id}"  class="col-3 col-sm-6"></div>
+                                              
+                                               <h5 >Debilidad </h5>
+                                               <br>
+                                               <div id="weak${element.id}" ></div>
+                                                 
+                                               </div>
+                                         </div>
+                                       </div>         
+                                         
+                                 </div>     
+                         </div>
+                     </div>
+                  </div>
+                      <div class="modal-footer">
+                     
+                  
+               </div>
+             </div>
+         </div>
+     </div>
+`
 
+createButtonTypeFind (element)
+
+ 
 
 });
 
 // FUNCION FILTRO
-document.type.options.forEach(element => {
+filter.forEach(element => {
 element.addEventListener('click',() => {
   container.innerHTML="";
-  let pokeFilter = window.filterData(pokeData,filter.value)
-
-  container.innerHTML += 
-`  
-<div class=" col-12  col-sm-6 col-md-4 col-lg-3 col-xl-2 " >
-<div class="card  border-dark text-center rounded-lg mb-3"  >
-  <p class="card-text">${pokeFilter.num}</p>
-    <img src="${pokeFilter.img}" class="card-img-top" alt="...">
-
-    <h5 class="card-title">${pokeFilter.name}</h5>
-<div>  
-   <button type="button"  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
-     Info
-   </button>
-</div>
-<br>
-</div>
-
-</div>`
-
-
+  modalImp.innerHTML="";
+  let cardFilter =window.filterData(pokeData,element.getAttribute("type-poke"));
+  
+  addElement(cardFilter);
+  modal(cardFilter);
+  createButtonType(cardFilter);
+  createButtonWeak (cardFilter);
+  
 })
 
 
 })
   
-   
-  
-
-
-
-
-
 
 // LISTENER PARA LLAMAR A LA FUNCION SORT 
 order.forEach(element => {
   element.addEventListener('click', () =>{ 
    // console.log("click");
     container.innerHTML="";
-    addElement(window.sortData(pokeData,element.getAttribute("ordered-by")));
-
+    modalImp.innerHTML="";
+   let cardSort= window.sortData(pokeData,element.getAttribute("ordered-by"));
+     addElement(cardSort);
+     modal(cardSort);
+     createButtonType(cardSort);
+     createButtonWeak (cardSort);
     
   })
 })
-
-
 
 // FUNCION MOSTRAR CARTAS 
 
@@ -101,60 +142,137 @@ order.forEach(element => {
     <div class=" col-12  col-sm-6 col-md-4 col-lg-3 col-xl-2 " >
        <div class="card  border-dark text-center rounded-lg mb-3"  >
             <p class="card-text">${element.num}</p>
-              <img src="${element.img}" class="card-img-top" alt="...">
+              <img src="${element.img}"  alt="...">
         
               <h5 class="card-title">${element.name}</h5>
           <div>  
-             <button type="button"  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
-               Info
-             </button>
-          </div>
+              
+              <a  class="btn btn-primary " data-toggle="modal" data-target="#modal${element.id}" href="#modal${element.id}">
+                Info
+               </a>
+               
+            </div>
           <br>
        </div>
         
     </div>`
        
+    
   });
-    //console.log("lista pokemon");
+    
      }
-   
   
-  // FUNCION ACTIVDA
-  
-  window.addEventListener('load', () =>{
-    addElement(pokeData);
-  });
-  
-
-
  
  // FUNCION MODAL  
  
+function modal (info) {
+info.forEach(element => {
+  modalImp.innerHTML +=
+  `
+           <div class="modal fade" id="modal${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                       <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">${element.name} N°${element.num} </h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                        </button>
+                             </div>
+                       <div class="modal-body">
+                          <div class="container-fluid">
+                                 <div class="row">  
+                                      <div class="col-sm-12">
+                                          <div class="row">
+                                            <div class="col-7 col-sm-6">
+                                                <img src="${element.img}"  alt="...">
+                                            
+                                                   <h5 >Altura:</h5>
+                                                    <h5 >${element.height}</h5>
+                                                    <h5 >Peso:</h5>
+                                                    <h5 >${element.weight}</h5>
+                                                </div>    
+                                             
+                                               <div class="col-3 col-sm-6">
+                                                  <h5 class="modal-title" >Tipo</h5>
+                                           
+                                                    <div id="type${element.id}"  class="col-3 col-sm-6"></div>
+                                                
+                                                 <h5 >Debilidad </h5>
+                                                 <br>
+                                                 <div id="weak${element.id}" ></div>
+                                                   
+                                                 </div>
+                                           </div>
+                                         </div>         
+                                           
+                                   </div>     
+                           </div>
+                       </div>
+                    </div>
+                        <div class="modal-footer">
+                       
+                    
+                 </div>
+               </div>
+           </div>
+       </div>
+`
+
+})
+
+
+}
+//FUNCION CREAR BOTON TIPO
+function createButtonType (data) {
+  data.forEach(element =>{
+    element.type.forEach(element =>{
+      
+      btnType += `<button class="  btn btn-primary  ${element}" >
+      ${element}
+  </button>`; 
+    } )
   
+    document.getElementById(`type${element.id}`).innerHTML = btnType;
+    btnType="";
+  })}
+
+  //FUNCION CREAR BOTON TIPO PARA FIND (aun no funciona bien)
+function createButtonTypeFind (data) {
+  data.type.forEach(element => {
+ 
+    document.getElementById(`type${element.id}`).innerHTML += `<button  class=" btn btn-primary  ${element}" >${element}</button>`; 
+    document.getElementById(`type${element.id}`).innerHTML="";
+  })
+  
+}
+ 
+//FUNCION CREAR BOTON DEBILIDAD
+function createButtonWeak (data) {
+  data.forEach(element =>{
+    element.weaknesses.forEach(element =>{
+      
+      btnWeak += `<button class=" btn btn-primary  ${element}" href="">
+      ${element}
+  </button>`; 
+    } )
+  
+    document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
+    btnWeak="";
+  })} 
+
+
+
+
+ 
+  modal(pokeData); 
+  createButtonType(pokeData);
+  createButtonWeak (pokeData);
 
 
 
 
 
 
-
-
-/*
-container.innerHTML =  `
-<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
-  <div class="card  border-dark text-center rounded-lg mb-3"  >
-    <p class="card-text">${pokeName.num}</p>
-    <img src="${pokeName.img}" class="card-img-top" alt="...">
-
-    <h5 class="card-title">${pokeName.name}</h5>
-
-    <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Info
-    </button>
-  </div>
-
-</div>`
-*/
 
 
 

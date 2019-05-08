@@ -13,7 +13,7 @@
   <body>
     
     <div class="container">
-      
+      <br>
       <!-- HEADER -->
       <header>
         <img src="img/logo.png" alt="logo">
@@ -21,102 +21,11 @@
       <br>
       <!-- NAV QUE NO SE VE -->
       <div class="pos-f-t">
-          <div class="collapse" id="navbarToggleExternalContent">
-             <div class="p-4" >
-                  
-              <!-- BOTONES TIPOS -->
-                  <div class="btn-group-toggle" data-toggle="buttons">
-                   
-                         <!-- GRASS -->
-                    <label  name-type="Grass" class="btn btn-success offset-md-2 Grass active">
-                      <input  type="radio" class="options" type-by="Grass" id="Grass" autocomplete="off"> Planta
-                    </label>
-                         
-                    
-                         <!-- GROUND -->
-                    <label name-type="ground" class="btn btn-success ground active">
-                      <input  type="radio" class="options" id="Ground" value="Ground" autocomplete="off"> Tierra
-                    </label>
-                            <!-- FIGHT --> 
-                    <label name-type="fight" class="btn btn-success fight active">
-                       <input type="radio" name="options" id="option3" autocomplete="off"> Lucha
-                    </label>
-                 
-                            <!-- BUG --> 
-                    <label name-type="bug" class="btn btn-success bug active">
-                        <input  type="radio" name="options" id="option4" autocomplete="off"> Bicho
-                    </label>
-                 
-                           <!-- NORMAL --> 
-                    <label name-type="normal" class="btn btn-success normal active">
-                      <input  type="radio" name="options" id="option5" autocomplete="off"> Normal
-                    </label>
-                             <!-- FLY --> 
-                    <label name-type="fly" class="btn btn-success fly active">
-                      <input  type="radio" name="options" id="option6" autocomplete="off"> Volador
-                    </label>
-                             <!-- DRAGON --> 
-                    <label name-type="dragon" class="btn btn-success dragon active">
-                      <input  type="radio" name="options" id="option7" autocomplete="off"> Dragon
-                    </label>
-                             <!-- PSYCHIC --> 
-                    <label name-type="psychic" class="btn btn-success psychic active">
-                      <input  type="radio" name="options" id="option8" autocomplete="off"> Psiquico
-                    </label>
-                  
-                              <!-- ICE --> 
-                    <label type="label" name-type="ice" class="btn btn-success ice active">
-                      <input  type="radio" name="options" id="option9" autocomplete="off"> Hielo
-                    </label>
-                    <br>
-                              <!-- FAIRY --> 
-                    <label name-type="fairy" class="btn btn-success offset-md-2 fairy active">
-                      <input  type="radio" name="options" id="option10" autocomplete="off"> Hada
-                    </label>
-                              <!-- ACERO --> 
-                    <label name-type="steel" class="btn btn-success steel active">
-                      <input  type="radio" name="options" id="option11" autocomplete="off"> Acero
-                    </label>
-                              <!-- POISON --> 
-                    <label name-type="poison" class="btn btn-success poison active">
-                      <input  type="radio" name="options" id="option12" autocomplete="off"> Veneno
-                    </label>
-                              <!-- FIRE --> 
-                    <label name-type="fire" class="btn btn-success fire active">
-                      <input  type="radio" name="options" id="option13" autocomplete="off"> Fuego
-                    </label>
-                              <!-- DARCK --> 
-                    <label name-type="darck" class="btn btn-success darck active">
-                      <input  type="radio" name="options" id="option14" autocomplete="off"> Siniestro
-                    </label>
-                             <!-- ROCK --> 
-                    <label name-type="rock" class="btn btn-success rock active">
-                      <input  type="radio" name="options" id="option15" autocomplete="off"> Roca
-                    </label>
-                               <!-- GHOST --> 
-                    <label name-type="ghost" class="btn btn-success ghost active">
-                      <input  type="radio" name="options" id="option16" autocomplete="off"> Fantasma
-                    </label>
-                                <!-- THUNDER --> 
-                    <label name-type="thunder" class="btn btn-success thunder active">
-                      <input  type="radio" name="options" id="option17" autocomplete="off"> Electrico
-                    </label>
-                              <!-- WATER --> 
-                    <label name-type="water" class="btn btn-success water active">
-                      <input  type="radio" name="options" id="option18" autocomplete="off"> Agua
-                    </label>
-                  
-                  </div>
-              
-                  <h5 class="text-white h4">Tipo</h5>
-                  <h5 class="text-white h4">Debilidad</h5>
-                  <h5 class="text-white h4">Resistencia</h5>
-                
-            </div>
-         </div>  
+         
          
         <!-- NAV -->
         <nav class="navbar navbar-fixed-top navbar-dark ">
+           
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
               <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
@@ -143,34 +52,104 @@
               Busqueda avanzada
             </button>
          </nav>
-        </div>
+         <div class="collapse" id="navbarToggleExternalContent">
+          <div class="p-4" >
+                   <h5 class="text-black h4"> Selecciona tipo</h5>
+           <!-- BOTONES TIPOS -->
+             
+                
+                      <!-- GRASS -->
+                
+                   <button  type="button" class="btn btn-success  type-poke Grass offset-md-1"  type-poke="Grass" > Planta </button>
+                 
+                      <!-- GROUND -->
+                 
+                   <button   type="button" class="btn btn-success type-poke Ground"  type-poke="Ground"> Tierra</button>
+                 
+                         <!-- FIGHTING --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Fighting"  type-poke="Fighting"> Lucha</button>
+                 
+                         <!-- BUG --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Bug"  type-poke="Bug" > Bicho</button>
+                 
+                         <!-- NORMAL --> 
+                
+                   <button type="button" class="btn btn-success type-poke Normal"  type-poke="Normal"> Normal </button>
+                
+                          <!-- FLYING --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Flying"  type-poke="Flying"> Volador </button>
+                
+                          <!-- DRAGON --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Dragon"  type-poke="Dragon"> Dragon </button>
+                 
+                          <!-- PSYCHIC --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Psychic"  type-poke="Psychic"> Psiquico </button>
+                 
+               
+                           <!-- ICE --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Ice"  type-poke="Ice"> Hielo </button>
+                 
+                 <br>
+                           <!-- FAIRY --> 
+                 
+                   <button type="button" class="btn btn-success offset-md-1 type-poke Fairy"  type-poke="Fairy"> Hada </button>
+                 
+                           <!-- ACERO --> 
+                
+                   <button type="button" class="btn btn-success type-poke Steel"  type-poke="Steel" > Acero </button>
+                 
+                           <!-- POISON --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Poison"  type-poke="Poison"> Veneno </button>
+                
+                           <!-- FIRE --> 
+                
+                   <button type="button" class="btn btn-success type-poke Fire"  type-poke="Fire"> Fuego </button>
+                 
+                           <!-- DARK --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Dark"  type-poke="Dark"> Siniestro</button>
+                
+                          <!-- ROCK --> 
+                
+                   <button type="button" class="btn btn-success type-poke Rock"  type-poke="Rock"> Roca </button>
+                 
+                            <!-- GHOST --> 
+                
+                   <button type="button" class="btn btn-success type-poke Ghost"  type-poke="Ghost"> Fantasma </button>
+                 
+                             <!-- ELECTRIC --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Electric"  type-poke="Electric"> Electrico</button>
+                 
+                           <!-- WATER --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Water"  type-poke="Water"> Agua</button>
+                    
+         </div>
+      </div>  
+      </div>
            
         <br>
 
-        <div id="back-color" class="col-8"></div> 
-   
-    
-     
-           
-          
-      
-          
-      
-      
-  
-     
+         
     <section>
       <div id="root">
-        <div id="show-data" class="row" >  </div>  
+          <div id="modal"> </div>
+        <div id="show-data" class="row" >
+          
+        
+          </div>  
       </div>
     </section>
    
-    
-
-      
-  
-    
-        
+          
   <footer id="nav-footer">
     <div class="container">
       <div class="row">

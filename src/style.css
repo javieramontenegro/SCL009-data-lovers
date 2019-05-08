@@ -18,68 +18,85 @@ html{
 
 .Grass{
     background-color: #23D406 !important;
+    width:6rem;
 }
-.ground{
+.Ground{
 
     background-color: #EEBE41 !important;
      top:150px;
+     width:6rem;
 }
-.fight{
+.Fighting{
     background-color: #FF0E1C !important;
     top:150px;
+    width:6rem;
 }
-.bug{
+.Bug{
     background-color: #6FBB55 !important;
     top:150px;
+    width:6rem;
 }
-.normal {
+.Normal {
     background-color: #BFBBBB !important;
     top:150px;
-    
+    width:6rem;
 }
 
-.fly {
+.Flying {
     background-color: #61B2CC !important;
     top:150px;
+    width:6rem;
 }
-.dragon {
+.Dragon {
     background-color: #DF6262 !important;
     top:150px;
+    width:6rem;
 }
-.psychic{
+.Psychic{
     background-color: #E24FC2 !important;
     top:150px;
+    width:6rem;
 }
-.ice{
+.Ice{
     background-color: #00D1FF !important;
     top:150px;
+    width:6rem;
 }
-.fairy{
+.Fairy{
     background-color: #FFA6A6 !important;
+    width:6rem;
 }
-.steel{
+.Steel{
     background-color: #B4D3DD !important;
+    width:6rem;
 }
-.poison{
+.Poison{
     background-color: #CC77CE !important;
+    width:6rem;
 }
-.fire{
+.Fire{
     background-color: #E45708 !important;
+    width:6rem;
 }
-.darck{
+.Dark{
     background-color: #4F4949 !important;
+    width:6rem;
 }
-.rock{
+.Rock{
     background-color: #948964 !important;
+    width:6rem;
 }
-.ghost{
+.Ghost{
     background-color: #B74FC0 !important;
+    width:6rem;
 }
-.thunder{
+.Electric{
     background-color: #E5E947 !important;
+    width:6rem;
 }
-.water{
+.Water{
     background-color: #0B63E9 !important;
+    width:6rem;
 }
 
 body{
@@ -101,31 +118,30 @@ body{
 .p-4{
     background-color: #69D7CF;
 }
-
-
-
-
-
-.col-8{
-    background-color: #FCE94D;
-    border-radius: 2rem;
-    z-index:0;
-
+.btn-success{
+    border-color:#69D7CF !important;
+    font-size: 1.1rem !important; 
+    color: black !important;
 }
+
+
+
+
+
 
 
 .card{
         background-color : #69D7CF !important;
-        
+        display: block !important;
         width: 10rem !important;
         height:15rem ;
         z-index:1; 
     }
 .card-img-top{
-         width: 8rem !important;
-         height: 8rem;
+         
          margin-left: auto;
          margin-right: auto;
+         width: 75% !important;
      }
 
 .content{
