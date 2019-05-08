@@ -15,7 +15,7 @@ window.addEventListener('load', () =>{
 orderDos.forEach(element => {
   element.addEventListener('click', () =>{ 
     container.innerHTML="";
-    addElement(window.sortData(pokeData,element.getAttribute("ordered-by")));
+    addElement(window.sortData(pokeData,element.getAttribute("ordered-by"),element.getAttribute("name")));
   })
 })
 

@@ -1,4 +1,3 @@
-
 html{
     height: 100%;
 }
@@ -30,6 +29,7 @@ body{
 .sz{
     width: 90px
 }
+
 
 #nav-footer{
    flex: 0 0 auto;

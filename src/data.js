@@ -1,10 +1,41 @@
-  // FUNCION SORT
+const sortData = (data, sortBy, sortOrder) => {
+  let arr = [];
 
-  const sortData = (data,condition) => {
-    let arr = [];
+  if (sortBy == "name"){
+
+    if(sortOrder === "az"){
+     
+      arr = data.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else {
+      arr = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+    }
+  }
+  else {
+    if(sortOrder === "IdAsc"){
+      arr = data.sort(sortById);
+    }
+    else {
+      arr = data.sort(sortById).reverse();
+    }
+  }
+  return arr;
+}
+
+function sortById(a,b) {
+  if (a.id > b.id){
+    return 1
+  }
+    return -1;
+}
+
+// FUNCION SORT
+
+ // const sortData = (data,condition) => {
+  //  let arr = [];
 
     // de a/z
-    if (condition === "az"){
+ /*   if (condition === "az"){
         arr= data.sort(sortByName)
     }
 
@@ -37,7 +68,7 @@
       return 1
       }
       return -1;
-  }
+  }*/
   
 window.sortData= sortData;
 
@@ -54,13 +85,20 @@ window.filterName= filterName;
 
 //  FILTRAR POR TIPO
 
-  const filterType = (pokeData,typeResult) =>{
+const filterType = (pokeData,typeResult) =>{
   const pokeType = pokeData.filter(element => element.type.includes(typeResult));
-
-  return pokeType
-  }
   
+  if ( pokeType.length === 0) {
+    alert('Kanto no tiene Pokemones de este tipo');
+}
+else return pokeType
+
+}
+
+
   window.filterType= filterType;
 
 
-//window.onload = pokeType(POKEMON.pokemon);
+//CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
+
+
