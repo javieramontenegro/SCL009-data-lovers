@@ -1,4 +1,36 @@
+const sortData = (data, sortBy, sortOrder) => {
+  let arr = [];
+
+  if (sortBy == "name"){
+
+    if(sortOrder === "az"){
+     
+      arr = data.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else {
+      arr = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+    }
+  }
+  else {
+    if(sortOrder === "IdAsc"){
+      arr = data.sort(sortById);
+    }
+    else {
+      arr = data.sort(sortById).reverse();
+    }
+  }
+  return arr;
+}
+
+function sortById(a,b) {
+  if (a.id > b.id){
+    return 1
+  }
+    return -1;
+}
+
 // FUNCION SORT
+
 /*const sortData = (data,condition) => {
    
     let arr = [];
@@ -14,27 +46,27 @@
     
   }
 
-
-  // del 1/151 
-  if (condition === "idAscending"){
-    arr= data.sort(sortById)
+del 1/151 
+    if (condition === "idAscending"){
+      arr= data.sort(sortById)
+    }
     
-  }
-  // del 151/1
-  if (condition === "idDescending"){
-    arr= data.sort(sortById).reverse();
+     return arr
     
-  }
-    return arr
-    
+    // del 151/1
+    if (condition === "idDescending"){
+      arr= data.sort(sortById).reverse();
+    }
+      return ar
   }
   
   function sortById(a,b) {
     if (a.id > b.id){
       return 1
-      }
+    }
       return -1;
   }
+
   function sortByName(a,b) {
     if (a.name > b.name){
       return 1
@@ -43,38 +75,36 @@
   } 
   */
   
- window.sortData= sortData;
+window.sortData= sortData;
 
 
+//FILTRAR POR NOMBRE
+const filterName = (pokeData, pokeSearch) =>{
+  const pokeName = pokeData.find(element => element.name === pokeSearch);
+  
+  return pokeName
+  }
 
 
+window.filterName= filterName;
 
-// FILTRAR NOMBRE
 
-const filterName = (data,name) =>{
-let obj={};
- 
-obj =data.find (element => {
-  return element.name === name;
-});
-return obj;
+//  FILTRAR POR TIPO
 
+const filterType = (pokeData,typeResult) =>{
+  const pokeType = pokeData.filter(element => element.type.includes(typeResult));
+  
+  if ( pokeType.length === 0) {
+    alert('Kanto no tiene Pokemones de este tipo');
 }
-window.filterName=filterName;
+else return pokeType
 
-
- //FILTRAR POR TIPO
-
-
-const filterData = (data,condition) =>{
-  let typeResult=[];
-  typeResult = data.filter(element => element.type.includes(condition));
-
-return typeResult;
 
 }
 
-window.filterData = filterData;
+
+  window.filterType= filterType;
 
 
+//CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
 
