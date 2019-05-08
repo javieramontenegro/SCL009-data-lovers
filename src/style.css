@@ -1,62 +1,184 @@
+/*
+@import url(//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b);
+@font-face {font-family: "04b";
+    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot");
+    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.svg#04b") format("svg");
+}
+
+*/
+
 html{
     height: 100%;
 }
 
+.Grass{
+    background-color: #23D406 !important;
+    width:6rem;
+}
+.Ground{
+
+    background-color: #EEBE41 !important;
+     top:150px;
+     width:6rem;
+}
+.Fighting{
+    background-color: #FF0E1C !important;
+    top:150px;
+    width:6rem;
+}
+.Bug{
+    background-color: #6FBB55 !important;
+    top:150px;
+    width:6rem;
+}
+.Normal {
+    background-color: #BFBBBB !important;
+    top:150px;
+    width:6rem;
+}
+
+.Flying {
+    background-color: #61B2CC !important;
+    top:150px;
+    width:6rem;
+}
+.Dragon {
+    background-color: #DF6262 !important;
+    top:150px;
+    width:6rem;
+}
+.Psychic{
+    background-color: #E24FC2 !important;
+    top:150px;
+    width:6rem;
+}
+.Ice{
+    background-color: #00D1FF !important;
+    top:150px;
+    width:6rem;
+}
+.Fairy{
+    background-color: #FFA6A6 !important;
+    width:6rem;
+}
+.Steel{
+    background-color: #B4D3DD !important;
+    width:6rem;
+}
+.Poison{
+    background-color: #CC77CE !important;
+    width:6rem;
+}
+.Fire{
+    background-color: #E45708 !important;
+    width:6rem;
+}
+.Dark{
+    background-color: #4F4949 !important;
+    width:6rem;
+}
+.Rock{
+    background-color: #948964 !important;
+    width:6rem;
+}
+.Ghost{
+    background-color: #B74FC0 !important;
+    width:6rem;
+}
+.Electric{
+    background-color: #E5E947 !important;
+    width:6rem;
+}
+.Water{
+    background-color: #0B63E9 !important;
+    width:6rem;
+}
+
 body{
     background-color : #095573 !important;
+    
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
     height: 100%;
+    
 }
 
+.navbar{
+    background-color: #DFDFDF;
+    
+}
+
+.p-4{
+    background-color: #69D7CF;
+}
+.btn-success{
+    border-color:#69D7CF !important;
+    font-size: 1.1rem !important; 
+    color: black !important;
+}
+
+
+
 .card{
-        border-color: black !important;
-        border: 10rem !important;
-        border-radius: 5rem !important;
         background-color : #69D7CF !important;
-        width: 10rem;
-        height:16rem
+        display: block !important;
+        width: 10rem !important;
+        height:15rem ;
+        z-index:1; 
+    }
+.card-img-top{
+         
+         margin-left: auto;
+         margin-right: auto;
+         width: 75% !important;
      }
 
 .content{
-  flex: 1 0 auto;
+    z-index:1; 
+    flex: 1 0 auto;
    -webkit-flex: 1 0 auto;
    min-height: 200px;
 }
 
-.sz{
-    width: 90px
-}
-
 
 #nav-footer{
-   flex: 0 0 auto;
+    z-index:1; 
+    flex: 0 0 auto;
    -webkit-flex: 0 0 auto;
 }
 
 #nav-footer {
+    z-index:1; 
     background-color: #3a3f46;
     color: white;
 }
 
 #nav-footer .row {
+    z-index:1; 
     margin-bottom: 60px;
 }
 
 #nav-footer .info{
+    z-index:1; 
     text-align: justify; 
     color: #afb0b1;
 }
 
 #nav-footer ul {
+    z-index:1; 
     list-style-type: none;
     padding-left: 0;
     line-height: 1.7;
 }
 
 #nav-footer h5 {
+    z-index:1; 
     font-size: 18px;
     color: white;
     font-weight: bold;
@@ -64,18 +186,21 @@ body{
 }
 
 #nav-footer a {
+    z-index:1; 
     color: #d2d1d1;
     text-decoration: none;
 }
 
 #nav-footer a:hover,
 #nav-footer a:focus {
+    z-index:1; 
     text-decoration: none;
     color: white;
 }
 
 @media screen and (max-width: 767px) {
     #nav-footer {
+        z-index:1; 
         text-align: center;
     }
 
@@ -83,8 +208,3 @@ body{
         text-align: center;
     }
 }
-
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-/* You can remove this. */

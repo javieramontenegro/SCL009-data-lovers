@@ -806,7 +806,7 @@ const POKEMON = {
   }, {
     "id": 29,
     "num": "029",
-    "name": "Nidoran ♀ (Female)",
+    "name": "Nidoran ♀",
     "img": "http://www.serebii.net/pokemongo/pokemon/029.png",
     "type": [
       "Poison"
@@ -891,7 +891,7 @@ const POKEMON = {
     ],
     "prev_evolution": [{
       "num": "029",
-      "name": "Nidoran(Female)"
+      "name": "Nidoran"
     }, {
       "num": "030",
       "name": "Nidorina"
@@ -4086,4 +4086,6 @@ const POKEMON = {
 }
 ;;
 
-window.POKEMON=POKEMON
+window.POKEMON=POKEMON;
+
+

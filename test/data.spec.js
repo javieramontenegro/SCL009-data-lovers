@@ -5,6 +5,7 @@ require('./data.spec.js');
 
 
 describe('sortData', () => {
+
  const data =[
    {
      "id": 1,
@@ -52,6 +53,7 @@ describe('sortData', () => {
 })
 
 describe('filterName', () => {
+
   const data =[
     {
       "id": 1,
@@ -69,6 +71,11 @@ describe('filterName', () => {
       "name": "Venusaur"
     }
     ]
+
+  
+  it('debería ser una función', () => {
+    assert.equal(typeof window.sortData, 'function');
+
  
   it('debería ser una función', () => {
     assert.equal(typeof window.filterName, 'function');
@@ -81,7 +88,7 @@ describe('filterName', () => {
  })
 
 
- describe('filterType', () => {
+describe('filterType', () => {
   const data =[
     {
       "id": 1,

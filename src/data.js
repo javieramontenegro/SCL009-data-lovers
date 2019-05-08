@@ -31,29 +31,33 @@ function sortById(a,b) {
 
 // FUNCION SORT
 
- // const sortData = (data,condition) => {
-  //  let arr = [];
-
+/*const sortData = (data,condition) => {
+   
+    let arr = [];
     // de a/z
- /*   if (condition === "az"){
-        arr= data.sort(sortByName)
-    }
+    if (condition === "az"){
+  
+    arr= data.sort(sortByName)
+    
+  }
+  //de z/a
+  if (condition === "za"){
+    arr= data.sort(sortByName).reverse();
+    
+  }
 
-    //de z/a
-    if (condition === "za"){
-      arr= data.sort(sortByName).reverse();
-    }
-
-    // del 1/151 
+del 1/151 
     if (condition === "idAscending"){
       arr= data.sort(sortById)
     }
-
+    
+     return arr
+    
     // del 151/1
     if (condition === "idDescending"){
       arr= data.sort(sortById).reverse();
     }
-      return arr
+      return ar
   }
   
   function sortById(a,b) {
@@ -68,7 +72,8 @@ function sortById(a,b) {
       return 1
       }
       return -1;
-  }*/
+  } 
+  */
   
 window.sortData= sortData;
 
@@ -83,6 +88,7 @@ const filterName = (pokeData, pokeSearch) =>{
 
 window.filterName= filterName;
 
+
 //  FILTRAR POR TIPO
 
 const filterType = (pokeData,typeResult) =>{
@@ -93,6 +99,7 @@ const filterType = (pokeData,typeResult) =>{
 }
 else return pokeType
 
+
 }
 
 
@@ -100,5 +107,4 @@ else return pokeType
 
 
 //CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
-
 

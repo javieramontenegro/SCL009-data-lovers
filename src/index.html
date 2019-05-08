@@ -7,113 +7,152 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- FONT FIGMA-->
+   <!-- <link href="//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b" rel="stylesheet" type="text/css"/> -->
+
+
   </head>
   
   <body>
     
     <div class="container">
-
+      <br>
+      <!-- HEADER -->
       <header>
         <img src="img/logo.png" alt="logo">
       </header>
       <br>
       
-      <div class="pos-f-t"> 
+      <!-- NAV QUE NO SE VE -->
+      <div class="pos-f-t">
         
-        
-        <nav class="navbar navbar-dark navbar-static-top bg-primary">
-            
-            <form class="form-inline my-2 my-lg-0">
+         
+        <!-- NAV -->
+        <nav class="navbar navbar-fixed-top navbar-dark ">
+       
+          <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 " type="search" placeholder="Nombre o Id" aria-label="Search">
               <button class="btn btn-warning my-2 my-sm-0"  type="submit">Buscar</button>
             </form>
-            <div class="dropdown">
+          <!-- DROPDOWN -->
+           
+          <div class="dropdown">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Ordenar por
               </button>
+
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <button type="button" ordered-by="name" name="az" class="dropdown-item ordered-by">A/Z</button>
                 <button type="button" ordered-by="name" name="za" class="dropdown-item ordered-by">Z/A</button>
                 <button type="button" ordered-by="id" name="IdAsc" class="dropdown-item ordered-by">0-151</button>
                 <button type="button" ordered-by="id" name="IdDes" class="dropdown-item ordered-by">151-0</button>
-              </div> 
-            </div> 
-
+              </div>  
+                            
+          </div>
+           
               <button class="  btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
               Busqueda avanzada
-            </button>              
-          
-          </nav>
-
-          <div class="collapse" id="navbarToggleExternalContent">
-              <div class="bg-primary p-4">
-    
-                <h5 class="text-white h4 col-xs-12 col-md-3">Tipo</h5>
-                  
-                <!-- BOTONES TIPOS -->
-                <div class="col-xs-12 col-md-9">
-                        
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Grass" > Planta </button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Ground" > Tierra</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Fighting" > Lucha</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Bug" > Bicho</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Normal " > Normal</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Flying" > Volador</button>      
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Dragon" > Dragon</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Psychic" > Psiquico</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Ice" > Hielo</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Fairy "  > Hada</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Steel"  > Acero</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Poison"  > Veneno</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Fire"  > Fuego</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Dark "  > Siniestro</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Rock"  > Roca</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Ghost"  > Fantasma</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Electric"  > Electrico</button>
-                  <button type="button" class="btn btn-success sz" name="options" option-by = "Water"  > Agua</button>
+            </button>
+         </nav>
+         <div class="collapse" id="navbarToggleExternalContent">
+          <div class="p-4" >
+                   <h5 class="text-black h4"> Selecciona tipo</h5>
+           <!-- BOTONES TIPOS -->
+             
+                
+                      <!-- GRASS -->
+                
+                   <button  type="button" class="btn btn-success  type-poke Grass offset-md-1"  type-poke="Grass" > Planta </button>
+                 
+                      <!-- GROUND -->
+                 
+                   <button   type="button" class="btn btn-success type-poke Ground"  type-poke="Ground"> Tierra</button>
+                 
+                         <!-- FIGHTING --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Fighting"  type-poke="Fighting"> Lucha</button>
+                 
+                         <!-- BUG --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Bug"  type-poke="Bug" > Bicho</button>
+                 
+                         <!-- NORMAL --> 
+                
+                   <button type="button" class="btn btn-success type-poke Normal"  type-poke="Normal"> Normal </button>
+                
+                          <!-- FLYING --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Flying"  type-poke="Flying"> Volador </button>
+                
+                          <!-- DRAGON --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Dragon"  type-poke="Dragon"> Dragon </button>
+                 
+                          <!-- PSYCHIC --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Psychic"  type-poke="Psychic"> Psiquico </button>
+                 
                
-                </div> 
-              </div> 
-            </div>
-      </div> 
-
-   
-      <div id="root">
-        
-        <div id="modal" >
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"></h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-              
-               <div class="modal-body"> </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                 <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>   
-           </div>
-
-          </div>
-        </div>    
+                           <!-- ICE --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Ice"  type-poke="Ice"> Hielo </button>
+                 
+                 <br>
+                           <!-- FAIRY --> 
+                 
+                   <button type="button" class="btn btn-success offset-md-1 type-poke Fairy"  type-poke="Fairy"> Hada </button>
+                 
+                           <!-- ACERO --> 
+                
+                   <button type="button" class="btn btn-success type-poke Steel"  type-poke="Steel" > Acero </button>
+                 
+                           <!-- POISON --> 
+                 
+                   <button  type="button" class="btn btn-success type-poke Poison"  type-poke="Poison"> Veneno </button>
+                
+                           <!-- FIRE --> 
+                
+                   <button type="button" class="btn btn-success type-poke Fire"  type-poke="Fire"> Fuego </button>
+                 
+                           <!-- DARK --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Dark"  type-poke="Dark"> Siniestro</button>
+                
+                          <!-- ROCK --> 
+                
+                   <button type="button" class="btn btn-success type-poke Rock"  type-poke="Rock"> Roca </button>
+                 
+                            <!-- GHOST --> 
+                
+                   <button type="button" class="btn btn-success type-poke Ghost"  type-poke="Ghost"> Fantasma </button>
+                 
+                             <!-- ELECTRIC --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Electric"  type-poke="Electric"> Electrico</button>
+                 
+                           <!-- WATER --> 
+                 
+                   <button type="button" class="btn btn-success type-poke Water"  type-poke="Water"> Agua</button>
+                    
+         </div>
+      </div>  
       </div>
-  
-
-      <section>
-        <div id="show-data" class="row" > </div>  
-      </section>
-   
            
-      
-      
-  
-    </div>
+        <br>
+
+         
+    <section>
+      <div id="root">
+          <div id="modal"> </div>
+        <div id="show-data" class="row" >
+          
         
+          </div>  
+      </div>
+    </section>  
+      
+  </div>  
+    
     <footer id="nav-footer">
       <div class="container">
         <div class="row">
@@ -141,10 +180,10 @@
         
         
          
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     
   </body>
 </html>
