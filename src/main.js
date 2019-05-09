@@ -43,7 +43,7 @@ element.addEventListener('click',() => {
   modal(cardFilter);
   createButtonType(cardFilter);
   createButtonWeak (cardFilter);
-  calculate.innerHTML = "La cantidad de pokemon tipo "+ element.getAttribute("type-poke") + " es "+ window.computeStats(cardFilter);
+  calculate.innerHTML = "La cantidad de Pokemon tipo "+ element.getAttribute("type-poke") + " es "+ window.computeStats(cardFilter);
   
 })
 })   

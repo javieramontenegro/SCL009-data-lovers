@@ -2,26 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- FONT FIGMA-->
-   <!-- <link href="//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b" rel="stylesheet" type="text/css"/> -->
   </head>
   
   <body>
     
     <div class="container">
       <br>
-      <!-- HEADER -->
       <header>
-        <img src="img/logo.png" alt="logo">
+        <img src="img/logo.png" class="logo" alt="logo">
       </header>
-      <br>
-      
-      <!-- NAV QUE NO SE VE -->
+     
       <div class="pos-f-t">
                 
         <!-- NAV -->
@@ -51,108 +45,46 @@
             Busqueda avanzada
           </button>
         </nav>
-         
+        
+         <!-- NAV QUE NO SE VE -->
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="p-4" >
+            <h5 class="text-black h4"> Selecciona tipo</h5>
             
-                   <h5 class="text-black h4"> Selecciona tipo</h5>
-           <!-- BOTONES TIPOS -->
-             
-                
-                      <!-- GRASS -->
-                
-                   <button  type="button" class="btn btn-success  type-poke Grass offset-md-1"  type-poke="Grass" > Planta </button>
-                 
-                      <!-- GROUND -->
-                 
-                   <button   type="button" class="btn btn-success type-poke Ground"  type-poke="Ground"> Tierra</button>
-                 
-                         <!-- FIGHTING --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Fighting"  type-poke="Fighting"> Lucha</button>
-                 
-                         <!-- BUG --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Bug"  type-poke="Bug" > Bicho</button>
-                 
-                         <!-- NORMAL --> 
-                
-                   <button type="button" class="btn btn-success type-poke Normal"  type-poke="Normal"> Normal </button>
-                
-                          <!-- FLYING --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Flying"  type-poke="Flying"> Volador </button>
-                
-                          <!-- DRAGON --> 
-                 
-                   <button  type="button" class="btn btn-success type-poke Dragon"  type-poke="Dragon"> Dragon </button>
-                 
-                          <!-- PSYCHIC --> 
-                 
-                   <button  type="button" class="btn btn-success type-poke Psychic"  type-poke="Psychic"> Psiquico </button>
-                 
-               
-                           <!-- ICE --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Ice"  type-poke="Ice"> Hielo </button>
-                 
-                 
-                           <!-- FAIRY --> 
-                 
-                   <button type="button" class="btn btn-success offset-md-1 type-poke Fairy"  type-poke="Fairy"> Hada </button>
-                 
-                           <!-- ACERO --> 
-                
-                   <button type="button" class="btn btn-success type-poke Steel"  type-poke="Steel" > Acero </button>
-                 
-                           <!-- POISON --> 
-                 
-                   <button  type="button" class="btn btn-success type-poke Poison"  type-poke="Poison"> Veneno </button>
-                
-                           <!-- FIRE --> 
-                
-                   <button type="button" class="btn btn-success type-poke Fire"  type-poke="Fire"> Fuego </button>
-                 
-                           <!-- DARK --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Dark"  type-poke="Dark"> Siniestro</button>
-                
-                          <!-- ROCK --> 
-                
-                   <button type="button" class="btn btn-success type-poke Rock"  type-poke="Rock"> Roca </button>
-                 
-                            <!-- GHOST --> 
-                
-                   <button type="button" class="btn btn-success type-poke Ghost"  type-poke="Ghost"> Fantasma </button>
-                 
-                             <!-- ELECTRIC --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Electric"  type-poke="Electric"> Electrico</button>
-                 
-                           <!-- WATER --> 
-                 
-                   <button type="button" class="btn btn-success type-poke Water"  type-poke="Water"> Agua</button>
+            <!-- BOTONES SEGUN TIPOS -->
+            <button type="button" class="btn btn-success  type-poke Grass offset-md-1" type-poke="Grass" > Planta </button>
+            <button type="button" class="btn btn-success type-poke Ground" type-poke="Ground"> Tierra</button>
+            <button type="button" class="btn btn-success type-poke Fighting" type-poke="Fighting"> Lucha</button>
+            <button type="button" class="btn btn-success type-poke Bug" type-poke="Bug" > Bicho</button>
+            <button type="button" class="btn btn-success type-poke Normal" type-poke="Normal"> Normal </button>
+            <button type="button" class="btn btn-success type-poke Flying" type-poke="Flying"> Volador </button>
+            <button type="button" class="btn btn-success type-poke Dragon" type-poke="Dragon"> Dragon </button>
+            <button type="button" class="btn btn-success type-poke Psychic" type-poke="Psychic"> Psiquico </button>
+            <button type="button" class="btn btn-success type-poke Ice" type-poke="Ice"> Hielo </button>
+            <button type="button" class="btn btn-success offset-md-1 type-poke Fairy" type-poke="Fairy"> Hada </button>
+            <button type="button" class="btn btn-success type-poke Steel" type-poke="Steel" > Acero </button>
+            <button type="button" class="btn btn-success type-poke Poison" type-poke="Poison"> Veneno </button>
+            <button type="button" class="btn btn-success type-poke Fire" type-poke="Fire"> Fuego </button>
+            <button type="button" class="btn btn-success type-poke Dark" type-poke="Dark"> Siniestro</button>
+            <button type="button" class="btn btn-success type-poke Rock" type-poke="Rock"> Roca </button>
+            <button type="button" class="btn btn-success type-poke Ghost" type-poke="Ghost"> Fantasma </button>
+            <button type="button" class="btn btn-success type-poke Electric" type-poke="Electric"> Electrico</button>
+            <button type="button" class="btn btn-success type-poke Water" type-poke="Water"> Agua</button>
+                   
+          </div>
+        </div>  
+      </div>    
+      <br>
 
-
-                    
-         </div>
-      </div>  
-    </div>    
-    <br>
-
-         
-    <section>
-      <div id="root">
+      <section>
+        <div id="root">
           <div id="modal"> </div>
           <div id="calculo"> </div>
-        <div id="show-data" class="row" >
-          
-        
-          </div>  
-      </div>
-    </section>  
+          <div id="show-data" class="row"></div>        
+        </div>
+      </section>  
       
-   </div>  
+    </div>  
     
     <footer id="nav-footer">
       <div class="container">
@@ -160,9 +92,9 @@
           <div class="col-sm-6">
             <h5>Nosotras</h5>
             <ul>
-              <li><a href="#">GitHub Javiera</a></li>
-              <li><a href="#">GitHub Daniela</a></li>
-              <li><a href="#">Repositorio Pokedex en GitHub</a></li>
+              <li><a href="">GitHub Javiera</a></li>
+              <li><a href="https://github.com/DonaPaz">GitHub Daniela</a></li>
+              <li><a href="https://github.com/javieramontenegro">Repositorio Pokedex en GitHub</a></li>
             </ul>
           </div>
           <div class="col-sm-6 info">
@@ -173,18 +105,13 @@
       </div>
     </footer> 
 
-
-   
     <script src="./data/pokemon/pokemon.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script> 
-        
-        
-         
+                
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
     
   </body>
 </html>

@@ -1,16 +1,3 @@
-/*
-@import url(//db.onlinewebfonts.com/c/f03febe581b686cbac1e6d5cb7677df3?family=04b);
-@font-face {font-family: "04b";
-    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot");
-    src: url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/f03febe581b686cbac1e6d5cb7677df3.svg#04b") format("svg");
-}
-
-*/
-
 html{
     height: 100%;
 }
@@ -25,52 +12,43 @@ body{
     height: 100%;
 }
  
+.logo{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
 
-.Grass{
-    background-color: #23D406 !important;
+.Grass, .Ground, .Fighting, .Bug, .Normal, .Flying, .Dragon,
+.Psychic, .Ice, .Fairy, .Steel, .Poison, .Fire, .Dark, .Rock,
+.Ghost, .Electric, .Water {
+    top:150px;
     width:6rem;
 }
+.Grass{
+    background-color: #23D406 !important;
+}
 .Ground{
-
     background-color: #EEBE41 !important;
-     top:150px;
-     width:6rem;
 }
 .Fighting{
     background-color: #FF0E1C !important;
-    top:150px;
-    width:6rem;
 }
 .Bug{
     background-color: #6FBB55 !important;
-    top:150px;
-    width:6rem;
 }
 .Normal {
     background-color: #BFBBBB !important;
-    top:150px;
-    width:6rem;
 }
-
 .Flying {
     background-color: #61B2CC !important;
-    top:150px;
-    width:6rem;
 }
 .Dragon {
     background-color: #DF6262 !important;
-    top:150px;
-    width:6rem;
 }
 .Psychic{
     background-color: #E24FC2 !important;
-    top:150px;
-    width:6rem;
 }
 .Ice{
     background-color: #00D1FF !important;
-    top:150px;
-    width:6rem;
 }
 .Fairy{
     background-color: #FFA6A6 !important;
@@ -81,12 +59,10 @@ body{
     width:6rem;
 }
 .Poison{
-    background-color: #CC77CE !important;
-    width:6rem;
+    background-color: #CC77CE !important;  
 }
 .Fire{
     background-color: #E45708 !important;
-    width:6rem;
 }
 .Dark{
     background-color: #4F4949 !important;
@@ -94,19 +70,15 @@ body{
 }
 .Rock{
     background-color: #948964 !important;
-    width:6rem;
 }
 .Ghost{
     background-color: #B74FC0 !important;
-    width:6rem;
 }
 .Electric{
     background-color: #E5E947 !important;
-    width:6rem;
 }
 .Water{
     background-color: #0B63E9 !important;
-    width:6rem;
 }
 
 #calculo{
