@@ -3,7 +3,7 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-
+// SORT
 describe('sortData', () => {
 
  const data =[
@@ -51,7 +51,7 @@ describe('sortData', () => {
  ]);
  });
 })
-
+// FIND NAME
 describe('filterName', () => {
 
   const data =[
@@ -72,11 +72,6 @@ describe('filterName', () => {
     }
     ]
 
-  
-  it('debería ser una función', () => {
-    assert.equal(typeof window.sortData, 'function');
-
- 
   it('debería ser una función', () => {
     assert.equal(typeof window.filterName, 'function');
   });
@@ -87,7 +82,7 @@ describe('filterName', () => {
   });
  })
 
-
+// FILTER
 describe('filterType', () => {
   const data =[
     {
@@ -134,4 +129,39 @@ describe('filterType', () => {
  
   ]);
   });
- })
+})
+//CALCULATE
+describe('computeStats', () => {
+  const data =[
+    {
+      "id": 1,
+      "num": "001",
+      "name": "Bulbasaur",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+    },
+    {
+      "id": 2,
+      "num": "002",
+      "name": "Ivysaur",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+    },
+   
+    ]
+ 
+  it('debería ser una función', () => {
+    assert.equal(typeof window.computeStats, 'function');
+  });
+ 
+  it('debería retornar la cantidad de pokemones planta (Grass)', () => {
+    assert.deepEqual(window.computeStats(data), 
+    
+      2
+      )
+  });
+})

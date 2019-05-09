@@ -1,3 +1,4 @@
+//FUNCION SORT
 const sortData = (data, sortBy, sortOrder) => {
   let arr = [];
 
@@ -94,10 +95,8 @@ window.filterName= filterName;
 const filterType = (pokeData,typeResult) =>{
   const pokeType = pokeData.filter(element => element.type.includes(typeResult));
   
-  if ( pokeType.length === 0) {
-    alert('Kanto no tiene Pokemones de este tipo');
-}
-else return pokeType
+  
+ return pokeType
 
 
 }
@@ -107,4 +106,12 @@ else return pokeType
 
 
 //CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
+
+const computeStats = (data) =>{
+  
+  
+  return data.length
+
+}
+window.computeStats = computeStats;
 

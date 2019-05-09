@@ -97,12 +97,19 @@ html{
     background-color: #0B63E9 !important;
     width:6rem;
 }
+#calculo{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
 
 body{
     background-color : #095573 !important;
     
-    display: flex;
-    display: -webkit-flex;
+    display:flex ;
+   /* display: -webkit-flex;*/
     flex-direction: column;
     -webkit-flex-direction: column;
     height: 100%;
