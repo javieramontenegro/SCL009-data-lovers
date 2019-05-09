@@ -75,21 +75,22 @@ Así mismo se realizó una _heurística de usabilidad_ simplificada y que puedes
 Nuestro primer objetivo fue distribuir cada elemento de la webapp, de acuerdo a lo visto en las historias de usuario, como se ve en el siguiente sketch:
 
 ![Sketch1](https://i.pinimg.com/originals/c0/b9/7c/c0b97c81be4d7d0655f4eab916267cfc.jpg)
+  
 
-Test de Usuario 1.  
+**Test de Usuario 1.**  
 El sketch anterior fue presentado a los distintos grupos de trabajo en Laboratoria para obtener feed-back, y de ello se resolvió mantener la distribución y prepararlo para ser nuevamente testeado.
 
 El nuevo sketch quedó de la siguiente manera:  
-Portada.
+Portada  
 ![Sketch-portada](https://i.pinimg.com/564x/a3/68/c0/a368c025456bc9029b03de92f41c0519.jpg)  
 
-Búsqueda Avanzada:
+Búsqueda Avanzada  
 ![Sketch-busq-avanzada](https://i.pinimg.com/564x/1a/fa/a3/1afaa3709c8c4f1f2df040342ed6b496.jpg)  
 
-Pop-up
+Pop-up  
 ![Sketch-pop-up](https://i.pinimg.com/originals/1d/f5/6d/1df56d01881da37281af12d8000b7817.jpg)  
 
-Test de usuario 2.  
+**Test de usuario 2**  
 Este sketch fue testeado usuarios reales que se encontraban en el sector de Parque Forestal, punto de encuetro de jugadores habituales de Pokemon GO.
 ![actividad-parque](https://i.pinimg.com/originals/bb/e0/42/bbe042bf7f8f5d987b5036ee7f1a1f03.jpg)
 
