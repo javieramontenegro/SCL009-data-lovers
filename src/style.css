@@ -15,6 +15,17 @@ html{
     height: 100%;
 }
 
+body{
+    background-color : #095573 !important;
+    
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+ 
+
 .Grass{
     background-color: #23D406 !important;
     width:6rem;
@@ -97,24 +108,13 @@ html{
     background-color: #0B63E9 !important;
     width:6rem;
 }
+
 #calculo{
     text-align: center;
     font-size: 2rem;
     color: white;
 }
 
-
-
-body{
-    background-color : #095573 !important;
-    
-    display:flex ;
-   /* display: -webkit-flex;*/
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-    
-}
 
 .navbar{
     background-color: #DFDFDF;
@@ -124,6 +124,7 @@ body{
 .p-4{
     background-color: #69D7CF;
 }
+
 .btn-success{
     border-color:#69D7CF !important;
     font-size: 1.1rem !important; 
@@ -132,25 +133,25 @@ body{
 
 
 
-.card{
-        background-color : #69D7CF !important;
-        display: block !important;
-        width: 10rem !important;
-        height:15rem ;
-        z-index:1; 
-    }
-.card-img-top{
-         
-         margin-left: auto;
-         margin-right: auto;
-         width: 75% !important;
-     }
+.card {
+    background-color : #69D7CF !important;
+    display: block !important;
+    width: 10rem !important;
+    height:15rem ;
+    
+}
+
+.card-img-top {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75% !important;
+}
 
 .content{
     z-index:1; 
     flex: 1 0 auto;
-   -webkit-flex: 1 0 auto;
-   min-height: 200px;
+    -webkit-flex: 1 0 auto;
+    min-height: 200px;
 }
 
 

@@ -1,10 +1,9 @@
-//FUNCION SORT
-const sortData = (data, sortBy, sortOrder) => {
+const sortData = (data, sortBy, condition) => {
   let arr = [];
 
   if (sortBy == "name"){
 
-    if(sortOrder === "az"){
+    if(condition === "az"){
      
       arr = data.sort((a, b) => a.name.localeCompare(b.name));
     }
@@ -13,7 +12,7 @@ const sortData = (data, sortBy, sortOrder) => {
     }
   }
   else {
-    if(sortOrder === "IdAsc"){
+    if(condition === "idAsc"){
       arr = data.sort(sortById);
     }
     else {
@@ -23,6 +22,7 @@ const sortData = (data, sortBy, sortOrder) => {
   return arr;
 }
 
+
 function sortById(a,b) {
   if (a.id > b.id){
     return 1
@@ -30,51 +30,6 @@ function sortById(a,b) {
     return -1;
 }
 
-// FUNCION SORT
-
-/*const sortData = (data,condition) => {
-   
-    let arr = [];
-    // de a/z
-    if (condition === "az"){
-  
-    arr= data.sort(sortByName)
-    
-  }
-  //de z/a
-  if (condition === "za"){
-    arr= data.sort(sortByName).reverse();
-    
-  }
-
-del 1/151 
-    if (condition === "idAscending"){
-      arr= data.sort(sortById)
-    }
-    
-     return arr
-    
-    // del 151/1
-    if (condition === "idDescending"){
-      arr= data.sort(sortById).reverse();
-    }
-      return ar
-  }
-  
-  function sortById(a,b) {
-    if (a.id > b.id){
-      return 1
-    }
-      return -1;
-  }
-
-  function sortByName(a,b) {
-    if (a.name > b.name){
-      return 1
-      }
-      return -1;
-  } 
-  */
   
 window.sortData= sortData;
 
@@ -89,15 +44,12 @@ const filterName = (pokeData, pokeSearch) =>{
 
 window.filterName= filterName;
 
-
 //  FILTRAR POR TIPO
 
 const filterType = (pokeData,typeResult) =>{
   const pokeType = pokeData.filter(element => element.type.includes(typeResult));
   
-  
- return pokeType
-
+  return pokeType
 
 }
 
@@ -106,7 +58,6 @@ const filterType = (pokeData,typeResult) =>{
 
 
 //CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
-
 const computeStats = (data) =>{
   
   
@@ -114,4 +65,5 @@ const computeStats = (data) =>{
 
 }
 window.computeStats = computeStats;
+
 

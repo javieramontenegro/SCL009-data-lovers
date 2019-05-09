@@ -27,11 +27,10 @@ order.forEach(element => {
      modal(cardSort);
      createButtonType(cardSort);
      createButtonWeak (cardSort);
-    })  }) 
-  
-    function upperFirst(string){
-      return string.charAt(0).toUpperCase() + string.slice(1);
-      } 
+
+    }) 
+}) 
+
 
  // FUNCION FILTRO
 filter.forEach(element => {
@@ -47,8 +46,6 @@ element.addEventListener('click',() => {
   calculate.innerHTML = "La cantidad de pokemon tipo "+ element.getAttribute("type-poke") + " es "+ window.computeStats(cardFilter);
   
 })
-
-
 })   
     
  
@@ -61,6 +58,7 @@ modalImp.innerHTML="";
 calculate.innerHTML ="";
 let pokeSearch = document.getElementsByTagName("input")[0].value;
 pokeSearch = upperFirst(pokeSearch.toLowerCase());
+
 let element = window.filterName(pokeData,pokeSearch);
 
 
@@ -70,7 +68,9 @@ container.innerHTML =  `
     <p class="card-text">${element.num}</p>
     <img src="${element.img}" class="card-img-top" alt="...">
     <h5 class="card-title">${element.name}</h5>
+
     <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.id}">
+
     Info
     </button>
   </div>
@@ -136,7 +136,10 @@ modalImp.innerHTML +=
 
 });
 
-
+ 
+    function upperFirst(string){
+      return string.charAt(0).toUpperCase() + string.slice(1);
+      } 
 
 
 
@@ -250,8 +253,6 @@ document.getElementById(`type${element.id}`).innerHTML = btnType;
   
 
 
-
-
 //FUNCION CREAR BOTON DEBILIDAD
 function createButtonWeak (data) {
   data.forEach(element =>{
@@ -259,13 +260,14 @@ function createButtonWeak (data) {
       
       btnWeak += `<button class=" btn btn-primary  ${element}" >
       ${element}
+
   </button>`
     } );
- 
+
    
     document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
     btnWeak="";
-  })} 
+  })}
  
   modal(pokeData); 
   createButtonType(pokeData);
