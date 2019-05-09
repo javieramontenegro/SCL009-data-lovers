@@ -77,7 +77,7 @@ Nuestro primer objetivo fue distribuir cada elemento de la webapp, de acuerdo a 
 ![Sketch1](https://i.pinimg.com/originals/c0/b9/7c/c0b97c81be4d7d0655f4eab916267cfc.jpg)
   
 
-**Test de Usuario 1.**  
+### **Test de Usuario 1**
 El sketch anterior fue presentado a los distintos grupos de trabajo en Laboratoria para obtener feed-back, y de ello se resolvió mantener la distribución y prepararlo para ser nuevamente testeado.
 
 El nuevo sketch quedó de la siguiente manera:  
@@ -89,8 +89,8 @@ Búsqueda Avanzada
 
 Pop-up  
 ![Sketch-pop-up](https://i.pinimg.com/originals/1d/f5/6d/1df56d01881da37281af12d8000b7817.jpg)  
-
-**Test de usuario 2**  
+  
+### **Test de usuario 2**
 Este sketch fue testeado usuarios reales que se encontraban en el sector de Parque Forestal, punto de encuetro de jugadores habituales de Pokemon GO.
 ![actividad-parque](https://i.pinimg.com/originals/bb/e0/42/bbe042bf7f8f5d987b5036ee7f1a1f03.jpg)
 
@@ -121,11 +121,13 @@ Una vez obtenido el prototipo final, este fue exportado a la aplicación Zeplin 
 ***
 Nuestra página consta de dos elementos principales para su funcionamiento, una barra de navegación "NAV-BAR" y la interfaz en forma de "CARDS" que muestra la data.
 
-En Nav_Bar contiene accesos que pertimitirán al usuario obtener la información que necesita, a través de:
+El Nav-Bar contiene accesos que pertimitirán al usuario obtener la información que necesita, a través de:
 
 __- Un buscador:__ Permite buscar Pokemones por nombre.  
 __- Un drop-down menu:__ Permite ordenar la data por orden alfabético y numérico.  
 __- Una búsqueda avanzada:__ Mediante un menú desplegable, el usuario accede a la búsqueda según tipo de pokemon.
+
+Las Cards muestran, inicialemente, la data completa, esta puede ser modificada según las funciones especificadas en las historias de usuario. 
 
 El resultado final de la implementación lo puedes ver en nuestro repositorio de GitHub Page ver aquí [aquí.](zpl.io/a7W1vBE)  
 
@@ -137,4 +139,3 @@ El resultado final de la implementación lo puedes ver en nuestro repositorio de
 - CSS
 - Figma
 - Google Fonts
-- GitHub
