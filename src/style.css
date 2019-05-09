@@ -24,7 +24,7 @@ body{
     -webkit-flex-direction: column;
     height: 100%;
 }
-
+ 
 
 .Grass{
     background-color: #23D406 !important;
@@ -109,6 +109,11 @@ body{
     width:6rem;
 }
 
+#calculo{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
 
 
 .navbar{

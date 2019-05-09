@@ -1,6 +1,6 @@
 /* Manejo del DOM */
 const pokeData=window.POKEMON.pokemon;
-
+const calculate = document.getElementById("calculo")
 const order = document.querySelectorAll("button.ordered-by");
 const filter = document.querySelectorAll("button.type-poke");
 const container = document.getElementById("show-data");
@@ -21,13 +21,16 @@ order.forEach(element => {
    // console.log("click");
     container.innerHTML="";
     modalImp.innerHTML="";
-   let cardSort= window.sortData(pokeData,element.getAttribute("ordered-by"),element.getAttribute("name"));
+    calculate.innerHTML ="";
+    let cardSort= window.sortData(pokeData,element.getAttribute("ordered-by"),element.getAttribute("name"));
      addElement(cardSort);
      modal(cardSort);
      createButtonType(cardSort);
      createButtonWeak (cardSort);
-  })
-  })
+
+    }) 
+}) 
+
 
  // FUNCION FILTRO
 filter.forEach(element => {
@@ -40,6 +43,7 @@ element.addEventListener('click',() => {
   modal(cardFilter);
   createButtonType(cardFilter);
   createButtonWeak (cardFilter);
+  calculate.innerHTML = "La cantidad de pokemon tipo "+ element.getAttribute("type-poke") + " es "+ window.computeStats(cardFilter);
   
 })
 })   
@@ -51,11 +55,12 @@ btnSearch.addEventListener('click', (e) => {
 e.preventDefault();
 container.innerHTML="";
 modalImp.innerHTML="";
-  
+calculate.innerHTML ="";
 let pokeSearch = document.getElementsByTagName("input")[0].value;
 pokeSearch = upperFirst(pokeSearch.toLowerCase());
 
 let element = window.filterName(pokeData,pokeSearch);
+
 
 container.innerHTML =  `
 <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
@@ -63,12 +68,16 @@ container.innerHTML =  `
     <p class="card-text">${element.num}</p>
     <img src="${element.img}" class="card-img-top" alt="...">
     <h5 class="card-title">${element.name}</h5>
-    <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#Modal${element.id}">
+
+    <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#modal${element.id}">
+
     Info
     </button>
   </div>
 </div>`
- modalImp.innerHTML +=
+
+
+modalImp.innerHTML +=
   `
            <div class="modal fade" id="modal${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -96,11 +105,15 @@ container.innerHTML =  `
                                                <div class="col-3 col-sm-6">
                                                   <h5 class="modal-title" >Tipo</h5>
                                            
-                                                    <div id="type${element.id}"  class="col-3 col-sm-6"></div>
+                                                    <div id="type${element.id}"  class="col-3 col-sm-6">
+                                                       <button  class=" btn btn-primary  ${element.type}" >${element.type}</button>
+                                                    </div>
                                                 
                                                  <h5 >Debilidad </h5>
                                                  <br>
-                                                 <div id="weak${element.id}" ></div>
+                                                 <div id="weak${element.id}" > 
+                                                       <button  class=" btn btn-primary  ${element.weaknesses}" >${element.weaknesses}</button>
+                                                 </div>
                                                    
                                                  </div>
                                            </div>
@@ -118,11 +131,15 @@ container.innerHTML =  `
            </div>
        </div>
 `
+
+
+
 });
 
-function upperFirst(string){
-  return string.charAt(0).toUpperCase() + string.slice(1);
-  } 
+ 
+    function upperFirst(string){
+      return string.charAt(0).toUpperCase() + string.slice(1);
+      } 
 
 
 
@@ -133,7 +150,7 @@ function upperFirst(string){
       info.forEach(element => {
         container.innerHTML += 
           `  
-    <div class=" col-12  col-sm-6 col-md-4 col-lg-3 col-xl-2 " >
+    <div class=" col-6  col-sm-4 col-md-4 col-lg-3 col-xl-2 " >
        <div class="card  border-dark text-center rounded-lg mb-3"  >
             <p class="card-text">${element.num}</p>
               <img src="${element.img}"  alt="...">
@@ -236,26 +253,17 @@ document.getElementById(`type${element.id}`).innerHTML = btnType;
   
 
 
-  //FUNCION CREAR BOTON TIPO PARA FIND (aun no funciona bien)
-/*function createButtonTypeFind (data) {
-  data.type.forEach(element => {
- 
-    document.getElementById(`type${element.id}`).innerHTML += `<button  class=" btn btn-primary  ${element}" >${element}</button>`; 
-    document.getElementById(`type${element.id}`).innerHTML="";
-  })
-  
-}*/
- 
-
 //FUNCION CREAR BOTON DEBILIDAD
 function createButtonWeak (data) {
   data.forEach(element =>{
     element.weaknesses.forEach(element =>{
       
-      btnWeak += `<button class=" btn btn-primary  ${element}" href="">
+      btnWeak += `<button class=" btn btn-primary  ${element}" >
       ${element}
-  </button>`; 
-    } )
+
+  </button>`
+    } );
+
    
     document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
     btnWeak="";
