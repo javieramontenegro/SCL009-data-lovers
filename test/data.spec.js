@@ -28,29 +28,94 @@ describe('sortData', () => {
    assert.equal(typeof window.sortData, 'function');
  });
 
- it('debería retornar la mini data ordenada desde la Z hasta la A', () => {
-   assert.deepEqual(window.sortData(data,"za"), [
+ it('debería retornar la mini data ordenada alfabéticamente A/Z', () => {
+  assert.deepEqual(window.sortData(data,"name","az"), [
+{
+  "id": 1,
+  "num": "001",
+  "name": "Bulbasaur"    
+},
+{
+ "id": 2,
+ "num": "002",
+ "name": "Ivysaur"
+},
+{
+  "id": 3,
+  "num": "003",
+  "name": "Venusaur"
+},
+]);
+});
 
-   {
-   "id": 3,
-   "num": "003",
-   "name": "Venusaur"},
- {
-   "id": 2,
-   "num": "002",
-   "name": "Ivysaur"
+it('debería retornar la mini data ordenada alfabéticamente Z/A', () => {
+  assert.deepEqual(window.sortData(data,"name","za"), [
+{
+ "id": 3,
+ "num": "003",
+ "name": "Venusaur"
+},
+{
+ "id": 2,
+ "num": "002",
+ "name": "Ivysaur"
+},
+{
+ "id": 1,
+ "num": "001",
+ "name": "Bulbasaur"
+},
 
- },
- {
-   "id": 1,
-   "num": "001",
-   "name": "Bulbasaur"
+]);
+});
 
- }
+it('debería retornar la mini data ordenada desde el id 1 hasta el id 3', () => {
+  assert.deepEqual(window.sortData(data, "id", "idAsc"), [
 
- ]);
- });
+    {
+      "id": 1,
+      "num": "001",
+      "name": "Bulbasaur"    
+    },
+    {
+     "id": 2,
+     "num": "002",
+     "name": "Ivysaur"
+    },
+    {
+      "id": 3,
+      "num": "003",
+      "name": "Venusaur"
+    },
+]);
+});
+
+it('debería retornar la mini data ordenada desde el id 3 hasta el id 1', () => {
+  assert.deepEqual(window.sortData(data, "id", "idDes"), [
+
+  {
+  "id": 3,
+  "num": "003",
+  "name": "Venusaur"},
+{
+  "id": 2,
+  "num": "002",
+  "name": "Ivysaur"
+
+},
+{
+  "id": 1,
+  "num": "001",
+  "name": "Bulbasaur"
+
+}
+
+]);
+});
+
 })
+
+
 
 describe('filterName', () => {
 
@@ -73,10 +138,6 @@ describe('filterName', () => {
     ]
 
   
-  it('debería ser una función', () => {
-    assert.equal(typeof window.sortData, 'function');
-
- 
   it('debería ser una función', () => {
     assert.equal(typeof window.filterName, 'function');
   });
@@ -134,4 +195,6 @@ describe('filterType', () => {
  
   ]);
   });
- })
+ 
+});
+ 

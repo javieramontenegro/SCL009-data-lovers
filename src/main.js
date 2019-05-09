@@ -4,7 +4,7 @@ const pokeData=window.POKEMON.pokemon;
 const order = document.querySelectorAll("button.ordered-by");
 const filter = document.querySelectorAll("button.type-poke");
 const container = document.getElementById("show-data");
-const btnSearch = document.getElementsByTagName("button")[18];
+const btnSearch = document.getElementsByTagName("button")[0];
 let modalImp = document.getElementById("modal");
 let btnType="";
 let btnWeak ="";
@@ -26,7 +26,8 @@ order.forEach(element => {
      modal(cardSort);
      createButtonType(cardSort);
      createButtonWeak (cardSort);
-
+  })
+  })
 
  // FUNCION FILTRO
 filter.forEach(element => {
@@ -41,8 +42,6 @@ element.addEventListener('click',() => {
   createButtonWeak (cardFilter);
   
 })
-
-
 })   
     
  
@@ -55,6 +54,7 @@ modalImp.innerHTML="";
   
 let pokeSearch = document.getElementsByTagName("input")[0].value;
 pokeSearch = upperFirst(pokeSearch.toLowerCase());
+
 let element = window.filterName(pokeData,pokeSearch);
 
 container.innerHTML =  `
@@ -63,7 +63,7 @@ container.innerHTML =  `
     <p class="card-text">${element.num}</p>
     <img src="${element.img}" class="card-img-top" alt="...">
     <h5 class="card-title">${element.name}</h5>
-    <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" id="info" class="btn btn-primary" data-toggle="modal" data-target="#Modal${element.id}">
     Info
     </button>
   </div>
@@ -223,7 +223,7 @@ function createButtonType (data) {
   data.forEach(element =>{
     element.type.forEach(element =>{
 
-      btnTYpe += `<button class="btn btn-primary ${element}">
+      btnType += `<button class="btn btn-primary ${element}">
       ${element}
 </button>`
    
@@ -237,14 +237,14 @@ document.getElementById(`type${element.id}`).innerHTML = btnType;
 
 
   //FUNCION CREAR BOTON TIPO PARA FIND (aun no funciona bien)
-function createButtonTypeFind (data) {
+/*function createButtonTypeFind (data) {
   data.type.forEach(element => {
  
     document.getElementById(`type${element.id}`).innerHTML += `<button  class=" btn btn-primary  ${element}" >${element}</button>`; 
     document.getElementById(`type${element.id}`).innerHTML="";
   })
   
-}
+}*/
  
 
 //FUNCION CREAR BOTON DEBILIDAD
@@ -256,11 +256,10 @@ function createButtonWeak (data) {
       ${element}
   </button>`; 
     } )
- })
    
     document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
     btnWeak="";
-  })} 
+  })}
  
   modal(pokeData); 
   createButtonType(pokeData);
