@@ -63,7 +63,7 @@ let element = window.filterName(pokeData,pokeSearch);
 
 
 container.innerHTML =  `
-<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
+<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
   <div class="card  border-dark text-center rounded-lg mb-3"  >
     <p class="card-text">${element.num}</p>
     <img src="${element.img}" class="card-img-top" alt="...">
