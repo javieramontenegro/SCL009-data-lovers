@@ -83,7 +83,9 @@ modalImp.innerHTML +=
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                        <div class="modal-header">
+                       <section>
                        <h5 class="modal-title" id="exampleModalLabel">${element.name} N°${element.num} </h5>
+                       </section>
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                        <span aria-hidden="true">&times;</span>
                         </button>
@@ -95,11 +97,12 @@ modalImp.innerHTML +=
                                           <div class="row">
                                             <div class="col-7 col-sm-6">
                                                 <img src="${element.img}"  alt="...">
-                                            
+                                                <section>
                                                    <h5 >Altura:</h5>
                                                     <h5 >${element.height}</h5>
                                                     <h5 >Peso:</h5>
                                                     <h5 >${element.weight}</h5>
+                                                  </section>    
                                                 </div>    
                                              
                                                <div class="col-3 col-sm-6">
@@ -184,7 +187,9 @@ info.forEach(element => {
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                        <div class="modal-header">
+                       <section>
                        <h5 class="modal-title" id="exampleModalLabel">${element.name} N°${element.num} </h5>
+                       </section>
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                        <span aria-hidden="true">&times;</span>
                         </button>
@@ -196,12 +201,13 @@ info.forEach(element => {
                                           <div class="row">
                                             <div class="col-7 col-sm-6">
                                                 <img src="${element.img}"  alt="...">
-                                            
+                                                    <section>
                                                    <h5 >Altura:</h5>
                                                     <h5 >${element.height}</h5>
                                                     <h5 >Peso:</h5>
                                                     <h5 >${element.weight}</h5>
-                                                </div>    
+                                                    </section>   
+                                                 </div>    
                                              
                                                <div class="col-3 col-sm-6">
                                                   <h5 class="modal-title" >Tipo</h5>
