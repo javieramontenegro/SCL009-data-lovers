@@ -899,7 +899,7 @@ const POKEMON = {
   }, {
     "id": 32,
     "num": "032",
-    "name": "Nidoran ♂ (Male)",
+    "name": "Nidoran ♂",
     "img": "http://www.serebii.net/pokemongo/pokemon/032.png",
     "type": [
       "Poison"

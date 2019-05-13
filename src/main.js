@@ -64,7 +64,7 @@ let element = window.filterName(pokeData,pokeSearch);
 
 container.innerHTML =  `
 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2" >
-  <div class="card  border-dark text-center rounded-lg mb-3"  >
+  <div class="card  border-dark text-center rounded-lg mb-3  ${element.type[0]}"  >
     <p class="card-text">${element.num}</p>
     <img src="${element.img}" class="card-img-top" alt="...">
     <h5 class="card-title">${element.name}</h5>
@@ -106,14 +106,14 @@ modalImp.innerHTML +=
                                                 </div>    
                                              
                                                <div class="col-3 col-sm-6">
-                                                  <h5 class="modal-title" >Tipo</h5>
+                                                  <h5 class="modal-title" >Tipo: </h5>
                                            
                                                     <div id="type${element.id}"  class="col-3 col-sm-6">
                                                        <button  class=" btn btn-primary  ${element.type}" >${element.type}</button>
                                                     </div>
                                                 
-                                                 <h5 >Debilidad </h5>
-                                                 <br>
+                                                 <h5 >Debilidad: </h5>
+                                                 
                                                  <div id="weak${element.id}" > 
                                                        <button  class=" btn btn-primary  ${element.weaknesses}" >${element.weaknesses}</button>
                                                  </div>
@@ -154,11 +154,11 @@ modalImp.innerHTML +=
         container.innerHTML += 
           `  
     <div class=" col-6  col-sm-4 col-md-4 col-lg-3 col-xl-2 " >
-       <div class="card  border-dark text-center rounded-lg mb-3"  >
+       <div class="card  border-dark text-center rounded-lg mb-3 ${element.type[0]}"  >
             <p class="card-text">${element.num}</p>
               <img src="${element.img}"  alt="...">
         
-              <h5 class="card-title">${element.name}</h5>
+              <p class="card-title">${element.name}</p>
           <div>  
               
               <a  class="btn btn-primary " data-toggle="modal" data-target="#modal${element.id}" href="#modal${element.id}">
@@ -210,12 +210,12 @@ info.forEach(element => {
                                                  </div>    
                                              
                                                <div class="col-3 col-sm-6">
-                                                  <h5 class="modal-title" >Tipo</h5>
+                                                  <h5 class="modal-title" >Tipo: </h5>
                                            
                                                     <div id="type${element.id}"  class="col-3 col-sm-6"></div>
                                                 
-                                                 <h5 >Debilidad </h5>
-                                                 <br>
+                                                 <h5 >Debilidad: </h5>
+                                                 
                                                  <div id="weak${element.id}" ></div>
                                                    
                                                  </div>

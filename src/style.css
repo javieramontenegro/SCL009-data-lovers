@@ -1,10 +1,24 @@
+@font-face {
+    font-family: '04b 30';
+    font-style: normal;
+    font-weight: normal;
+    src: local('04b 30'), url('04B_30__.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF Pixelate';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Pixelate'), url('SF Pixelate.woff') format('woff');
+}
+
 html{
     height: 100%;
 }
 
 body{
     background-color : #095573 !important;
-    
+    font-family: '04b 30';
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -18,11 +32,35 @@ body{
     width: 100%;
     height: auto;
 }
+.btn-warning{
+    font-family: 'SF Pixelate'
+}
+
+
+.type-poke{
+    font-family: 'SF Pixelate';
+    width:7rem !important;
+    font-size: 0,5rem !important;
+}
+.card-title {
+    font-family: '04b 30';
+    font-size: 1rem !important;
+}
+h5{
+    font-family: '04b 30';
+}
+.btn-primary{
+    border-color: white !important;
+    font-family: 'SF Pixelate'
+}
+.ordered-by{
+    font-family: 'SF Pixelate';
+}
 
 .Grass, .Ground, .Fighting, .Bug, .Normal, .Flying, .Dragon,
 .Psychic, .Ice, .Fairy, .Steel, .Poison, .Fire, .Dark, .Rock,
 .Ghost, .Electric, .Water {
-    top:150px;
+    
     width:6rem;
 }
 .Grass{
@@ -54,11 +92,11 @@ body{
 }
 .Fairy{
     background-color: #FFA6A6 !important;
-    width:6rem;
+    
 }
 .Steel{
     background-color: #B4D3DD !important;
-    width:6rem;
+    
 }
 .Poison{
     background-color: #CC77CE !important;  
@@ -68,7 +106,7 @@ body{
 }
 .Dark{
     background-color: #4F4949 !important;
-    width:6rem;
+    
 }
 .Rock{
     background-color: #948964 !important;
@@ -87,6 +125,8 @@ body{
     text-align: center;
     font-size: 2rem;
     color: white;
+    font-family: '04b 30' !important; 
+    
 }
 
 
@@ -101,17 +141,18 @@ body{
 
 .btn-success{
     border-color:#69D7CF !important;
-    font-size: 1.1rem !important; 
+    font-size: 1rem !important; 
     color: black !important;
 }
 
 
 
 .card {
-    background-color : #69D7CF !important;
+   /* background-color : #69D7CF !important;*/
     display: block !important;
     width: 10rem !important;
     height:15rem ;
+    font-family: '04b 30' !important; 
     
 }
 
@@ -129,16 +170,14 @@ body{
 }
 
 
-#nav-footer{
-    z-index:1; 
-    flex: 0 0 auto;
-   -webkit-flex: 0 0 auto;
-}
 
 #nav-footer {
     z-index:1; 
     background-color: #3a3f46;
     color: white;
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+
 }
 
 #nav-footer .row {
@@ -150,6 +189,7 @@ body{
     z-index:1; 
     text-align: justify; 
     color: #afb0b1;
+    font-family: 'SF Pixelate'
 }
 
 #nav-footer ul {
@@ -157,6 +197,7 @@ body{
     list-style-type: none;
     padding-left: 0;
     line-height: 1.7;
+    font-family: 'SF Pixelate';
 }
 
 #nav-footer h5 {
@@ -190,3 +231,4 @@ body{
         text-align: center;
     }
 }
+
