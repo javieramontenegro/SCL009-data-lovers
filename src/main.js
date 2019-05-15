@@ -1,5 +1,16 @@
 /* Manejo del DOM */
-const pokeData=window.POKEMON.pokemon;
+fetch("https://raw.githubusercontent.com/javieramontenegro/SCL009-data-lovers/master/src/data/pokemon/pokemon.json")
+.then(function(resp){
+ return resp.json();
+ })
+.then(function(data){
+ console.log(data.pokemon);
+
+
+
+
+
+//const pokeData=window.POKEMON.pokemon;
 const calculate = document.getElementById("calculo")
 const order = document.querySelectorAll("button.ordered-by");
 const filter = document.querySelectorAll("button.type-poke");
@@ -11,8 +22,79 @@ let btnWeak ="";
 
 // FUNCION ACTIVDA
 window.addEventListener('load', () =>{
-  addElement(pokeData);
+  addElement(data.pokemon);
 });
+//FUNCIONES
+const sortData = (data, sortBy, condition) => {
+  let arr = [];
+
+  if (sortBy == "name"){
+
+    if(condition === "az"){
+     
+      arr = data.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else {
+      arr = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+    }
+  }
+  else {
+    if(condition === "idAsc"){
+      arr = data.sort(sortById);
+    }
+    else {
+      arr = data.sort(sortById).reverse();
+    }
+  }
+  return arr;
+}
+
+
+function sortById(a,b) {
+  if (a.id > b.id){
+    return 1
+  }
+    return -1;
+}
+
+  
+window.sortData= sortData;
+
+
+//FILTRAR POR NOMBRE
+const filterName = (pokeData, pokeSearch) =>{
+  const pokeName = pokeData.find(element => element.name === pokeSearch);
+  
+  return pokeName
+  }
+
+
+window.filterName= filterName;
+
+//  FILTRAR POR TIPO
+
+const filterType = (pokeData,typeResult) =>{
+  const pokeType = pokeData.filter(element => element.type.includes(typeResult));
+  
+  return pokeType
+
+}
+
+
+  window.filterType= filterType;
+
+
+//CALCULAR CANTIDAD DE POKEMON SEGUN TIPO
+const computeStats = (data) =>{
+  
+  
+  return data.length
+
+}
+window.computeStats = computeStats;
+
+
+
 
 
 // LISTENER PARA LLAMAR A LA FUNCION SORT 
@@ -22,7 +104,7 @@ order.forEach(element => {
     container.innerHTML="";
     modalImp.innerHTML="";
     calculate.innerHTML ="";
-    let cardSort= window.sortData(pokeData,element.getAttribute("ordered-by"),element.getAttribute("name"));
+    let cardSort= window.sortData(data.pokemon,element.getAttribute("ordered-by"),element.getAttribute("name"));
      addElement(cardSort);
      modal(cardSort);
      createButtonType(cardSort);
@@ -37,7 +119,7 @@ filter.forEach(element => {
 element.addEventListener('click',() => {
   container.innerHTML="";
   modalImp.innerHTML="";
-  let cardFilter =window.filterType(pokeData,element.getAttribute("type-poke"));
+  let cardFilter =window.filterType(data.pokemon,element.getAttribute("type-poke"));
   
   addElement(cardFilter);
   modal(cardFilter);
@@ -59,7 +141,7 @@ calculate.innerHTML ="";
 let pokeSearch = document.getElementsByTagName("input")[0].value;
 pokeSearch = upperFirst(pokeSearch.toLowerCase());
 
-let element = window.filterName(pokeData,pokeSearch);
+let element = window.filterName(data.pokemon,pokeSearch);
 
 
 container.innerHTML =  `
@@ -275,6 +357,17 @@ function createButtonWeak (data) {
     btnWeak="";
   })}
  
-  modal(pokeData); 
-  createButtonType(pokeData);
-  createButtonWeak (pokeData);
+  modal(data.pokemon); 
+  createButtonType(data.pokemon);
+  createButtonWeak (data.pokemon);
+
+});
+ /* const numero = 1;
+const url =`https://pokeapi.co/api/v2/pokemon/${numero}`;
+  let myInit = { method: 'GET',
+                 headers:{'Content-Type' :'application/json'},
+                 mode:'no-cors',
+                 cache:'default'
+ };*/
+ 
+              
